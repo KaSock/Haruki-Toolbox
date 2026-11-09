@@ -4,7 +4,7 @@ export default {
   "tools": {
     "clientConfigGenerator": {
       "title": "Haruki Client 配置生成器",
-      "description": "按新版 Haruki Client 的 configs.yaml 字段生成本地配置，包含动态路由、控制 API、模块与黑白名单策略。",
+      "description": "按新版 Haruki Client 的 configs.yaml 字段生成本地配置，包含动态路由、控制 API、模块与黑白名单策略",
       "summary": {
         "modules": "启用模块",
         "admins": "管理员",
@@ -13,23 +13,23 @@ export default {
       "sections": {
         "identity": {
           "title": "基础身份",
-          "description": "填写本地监听端口、Bot ID、登录凭证和可选安全校验参数。"
+          "description": "填写本地监听端口、Bot ID、登录凭证和可选安全校验参数"
         },
         "routing": {
           "title": "网络路由",
-          "description": "配置云端 API 的动态主副节点或固定覆盖端点。"
+          "description": "配置云端 API 的动态主副节点或固定覆盖端点"
         },
         "runtime": {
           "title": "运行策略",
-          "description": "控制私聊响应、帮助、国服功能、回复引用和全局指令限流。"
+          "description": "控制私聊响应、帮助、国服功能、回复引用和全局指令限流"
         },
         "modules": {
           "title": "模块与功能范围",
-          "description": "按 manifest 的 command_module 控制基础模块，再按 cloud 当前 client_policy_scope 设置功能级策略。"
+          "description": "按 manifest 的 command_module 控制基础模块，再按 cloud 当前 client_policy_scope 设置功能级策略"
         },
         "access": {
           "title": "权限名单",
-          "description": "按 scope 填写群黑名单、群白名单、用户黑名单和 Bot 管理员 QQ。"
+          "description": "按 scope 填写群黑名单、群白名单、用户黑名单和 Bot 管理员 QQ"
         }
       },
       "fields": {
@@ -65,22 +65,22 @@ export default {
         },
         "controlApiAccessToken": {
           "label": "控制 API 访问令牌",
-          "description": "开启后控制 API 需要 Bearer Token；关闭时写入 null。",
+          "description": "开启后控制 API 需要 Bearer Token；关闭时写入 null",
           "placeholder": "本机控制接口访问令牌"
         },
         "serverEndpointOverride": {
           "label": "固定服务端端点",
           "placeholder": "群内如果没有通知则留空",
-          "help": "仅在群内通知要求固定端点时填写；没有通知则留空。"
+          "help": "仅在群内通知要求固定端点时填写；没有通知则留空"
         },
         "routingConfigURL": {
           "label": "动态路由配置 URL",
           "placeholder": "留空使用 client 内置 routing-v3.json 地址",
-          "help": "用于生产/备用节点 failover。固定端点非空时不会生效。"
+          "help": "用于生产/备用节点 failover固定端点非空时不会生效"
         },
         "enableDynamicRouting": {
           "label": "启用动态路由",
-          "description": "默认开启；关闭后仅使用 client 内置端点和 keyset 允许的端点。"
+          "description": "默认开启；关闭后仅使用 client 内置端点和 keyset 允许的端点"
         },
         "runMode": {
           "label": "运行模式",
@@ -92,7 +92,7 @@ export default {
         },
         "enableGroupCommandLimit": {
           "label": "启用全局指令限流",
-          "description": "限制所有群合计的每小时/每日成功调用次数，0 表示不限制。"
+          "description": "限制所有群合计的每小时/每日成功调用次数，0 表示不限制"
         },
         "globalCommandHourlyLimit": {
           "label": "每小时上限"
@@ -103,7 +103,7 @@ export default {
         "mysekaiBirthdayMonitorMode": {
           "label": "生日材料推送模式",
           "placeholder": "选择名单模式",
-          "help": "只控制生日材料监听推送，不影响普通指令的运行模式。"
+          "help": "只控制生日材料监听推送，不影响普通指令的运行模式"
         },
         "mysekaiBirthdayMonitorBlacklist": {
           "label": "生日推送群黑名单",
@@ -116,12 +116,12 @@ export default {
         "enableModules": {
           "label": "启用模块",
           "placeholder": "选择模块",
-          "help": "通过下拉选择 command_module；all 表示启用全部模块。card/music/mysekai 等是云端业务分类，不是这里的基础模块名。"
+          "help": "通过下拉选择 command_module；all 表示启用全部模块card/music/mysekai 等是云端业务分类，不是这里的基础模块名"
         },
         "featurePolicyModes": {
           "label": "功能级策略模式",
           "placeholder": "选择功能 scope",
-          "help": "只在某个功能需要覆盖全局运行模式时添加；没有单独策略时保持为空即可。"
+          "help": "只在某个功能需要覆盖全局运行模式时添加；没有单独策略时保持为空即可"
         },
         "blacklists": {
           "label": "群黑名单",
@@ -138,41 +138,41 @@ export default {
         "botAdmins": {
           "label": "Bot 管理员 QQ",
           "placeholder": "114514\n1919810",
-          "help": "管理员可在群内使用 Haruki Client 控制命令。"
+          "help": "管理员可在群内使用 Haruki Client 控制命令"
         }
       },
       "toggles": {
         "enableHelp": {
           "label": "帮助命令",
-          "description": "允许内置帮助响应。"
+          "description": "允许内置帮助响应"
         },
         "enableCN": {
           "label": "国服功能",
-          "description": "启用 CN 相关功能。"
+          "description": "启用 CN 相关功能"
         },
         "enablePrivateMessage": {
           "label": "响应私聊指令",
-          "description": "私聊不受群黑白名单限制，但仍受用户黑名单和限流约束。"
+          "description": "私聊不受群黑白名单限制，但仍受用户黑名单和限流约束"
         },
         "enableReplyMessage": {
           "label": "引用回复",
-          "description": "回复结果时引用原消息。"
+          "description": "回复结果时引用原消息"
         },
         "sendBase64Image": {
           "label": "图片转 Base64",
-          "description": "客户端下载 Cloud 图片后以 base64 发送给 OneBot。"
+          "description": "客户端下载 Cloud 图片后以 base64 发送给 OneBot"
         },
         "mysekaiBirthdayMonitorNotifyEmpty": {
           "label": "生日空结果通知",
-          "description": "烤森生日材料监听无命中时也发送通知。"
+          "description": "烤森生日材料监听无命中时也发送通知"
         },
         "enableParamEcho": {
           "label": "参数错误回显",
-          "description": "Cloud 参数解析错误时允许回显具体参数。"
+          "description": "Cloud 参数解析错误时允许回显具体参数"
         },
         "strictConfigPermissions": {
           "label": "严格检查配置权限",
-          "description": "若 configs.yaml 可被同组或其他用户读取则拒绝启动；启用后请设为 0600。"
+          "description": "若 configs.yaml 可被同组或其他用户读取则拒绝启动；启用后请设为 0600"
         }
       },
       "actions": {
@@ -194,7 +194,7 @@ export default {
         "scopeLabel": "功能 scope",
         "scopePlaceholder": "选择功能",
         "modePlaceholder": "选择策略",
-        "empty": "没有功能需要单独策略时，这里保持为空。"
+        "empty": "没有功能需要单独策略时，这里保持为空"
       },
       "accessEditor": {
         "scopeLabel": "名单 scope",
@@ -210,9 +210,9 @@ export default {
         "userIdLabel": "用户 QQ",
         "userIdPlaceholder": "用户 QQ",
         "botAdminPlaceholder": "管理员 QQ",
-        "blacklistsDescription": "选择全局、模块或功能范围，再添加需要禁用的群。",
-        "whitelistsDescription": "选择全局、模块或功能范围，再添加允许使用的群。",
-        "userBlacklistsDescription": "选择全局、模块或功能范围，再添加需要禁用的用户 QQ。"
+        "blacklistsDescription": "选择全局、模块或功能范围，再添加需要禁用的群",
+        "whitelistsDescription": "选择全局、模块或功能范围，再添加允许使用的群",
+        "userBlacklistsDescription": "选择全局、模块或功能范围，再添加需要禁用的用户 QQ"
       },
       "runMode": {
         "blacklist": "黑名单模式",
@@ -222,28 +222,28 @@ export default {
         "dynamic": "当前使用动态路由",
         "pinned": "当前固定服务端端点",
         "builtIn": "当前使用内置端点",
-        "dynamicDescription": "client 会读取 routingConfigURL；留空时使用内置 EdgeOne routing-v3.json 地址。",
-        "pinnedDescription": "serverEndpointOverride 非空时，client 会直接使用该端点，不再读取动态路由配置。",
-        "builtInDescription": "动态路由已关闭，client 只使用内置端点和 keyset 允许的端点。"
+        "dynamicDescription": "client 会读取 routingConfigURL；留空时使用内置 EdgeOne routing-v3.json 地址",
+        "pinnedDescription": "serverEndpointOverride 非空时，client 会直接使用该端点，不再读取动态路由配置",
+        "builtInDescription": "动态路由已关闭，client 只使用内置端点和 keyset 允许的端点"
       },
       "preview": {
         "title": "configs.yaml 预览",
-        "description": "右侧内容会随表单实时更新，可直接复制到 Haruki Client 工作目录。"
+        "description": "右侧内容会随表单实时更新，可直接复制到 Haruki Client 工作目录"
       },
       "prefill": {
         "title": "已从注册结果带入",
-        "description": "Bot ID 与凭据已自动填入配置表单，ownerId 仅用于确认注册来源，不会写入 configs.yaml。",
+        "description": "Bot ID 与凭据已自动填入配置表单，ownerId 仅用于确认注册来源，不会写入 configs.yaml",
         "ownerId": "ownerId：{value}",
         "botId": "Bot ID：{value}",
         "credential": "Credential 已填入"
       },
       "notes": {
         "title": "填写说明",
-        "description": "生成器只在浏览器本地处理内容，不会提交凭证。",
+        "description": "生成器只在浏览器本地处理内容，不会提交凭证",
         "items": {
-          "dynamicRouting": "新版 client 默认启用动态路由；routingConfigURL 留空即可使用内置 routing-v3.json。",
-          "accessToken": "controlApiAccessToken 不需要鉴权时保持关闭，YAML 会写成 null。",
-          "listSyntax": "名单可以逐行添加 scope 和群号/QQ，生成器会自动合并为 client 需要的 YAML。"
+          "dynamicRouting": "新版 client 默认启用动态路由；routingConfigURL 留空即可使用内置 routing-v3.json",
+          "accessToken": "controlApiAccessToken 不需要鉴权时保持关闭，YAML 会写成 null",
+          "listSyntax": "名单可以逐行添加 scope 和群号/QQ，生成器会自动合并为 client 需要的 YAML"
         }
       },
       "toast": {
@@ -255,16 +255,16 @@ export default {
     },
     "iosModules": {
       "title": "iOS 模块（iPhone / iPad）",
-      "description": "生成一个代理模块装进 Shadowrocket、Surge 等代理软件，之后进游戏时数据会自动上传。",
+      "description": "",
       "tutorialAlert": {
         "label": "图文教程：",
         "linkText": "点击查看",
         "nonZhWarning": "本教程仅有简体中文版本"
       },
       "qxScriptWarning": "Quantumult X 不支持脚本上传模式",
-      "cnRestriction": "由于相关法律法规限制，本站不提供国服的烤森（MySekai）功能的安装。",
+      "cnRestriction": "由于相关法律法规限制，本站不提供国服的烤森（MySekai）功能的安装",
       "installButton": "快速安装模块",
-      "installHint": "点击后会自动打开你选的代理软件并导入模块",
+      "installHint": "",
       "copyAction": "复制{label}",
       "copyLabel": {
         "uploadCode": "上传码",
@@ -274,64 +274,64 @@ export default {
       "steps": {
         "configure": {
           "title": "配置",
-          "description": "选择代理软件、服务器线路与上传方式。"
+          "description": ""
         },
         "scope": {
           "title": "范围",
-          "description": "选择需要上传数据的区服和数据类型。"
+          "description": "选择需要上传数据的区服和数据类型"
         },
         "install": {
           "title": "获取与安装",
-          "prerequisite": "需要先登录并绑定游戏账号。",
-          "description": "生成上传码后，可复制 URL 手动安装或一键快速安装。",
-          "after": "安装后打开游戏并进入主页一次，上传成功后首页「我的账号」会显示上传时间。"
+          "prerequisite": "需要先登录并绑定游戏账号",
+          "description": "",
+          "after": ""
         }
       },
       "sections": {
         "software": {
           "title": "选择软件",
-          "description": "选择需要安装模块的代理工具",
+          "description": "选择代理工具",
           "placeholder": "请选择软件"
         },
         "endpoint": {
           "title": "服务器线路",
-          "description": "国内直连即可；人在海外可选 CDN。",
+          "description": "国内选直连；海外选 CDN",
           "placeholder": "请选择线路"
         },
         "mode": {
           "title": "选择上传数据方式",
-          "description": "「脚本上传」可与其他 Bot 的模块同时使用，但偶尔不稳定；「代理上传」更稳定，但同一时间只能装一个工具箱模块。不确定选「代理上传」。",
+          "description": "「脚本上传」可与其他 Bot 的模块同时使用 不稳定\n「代理上传」同一时间只能装一个工具箱模块 更稳定",
           "placeholder": "请选择上传方式"
         },
         "chunk": {
           "title": "文件分片大小",
-          "description": "一般保持默认即可。数值越大进游戏越快，但部分代理软件可能上传失败。",
+          "description": "一般保持默认即可\n数值越大进游戏越快，但部分代理软件可能上传失败",
           "unit": "MB"
         },
         "notify": {
           "title": "上传通知",
-          "description": "每次上传后手机弹出通知，告诉你上传成功还是失败。装好后也可以在代理软件的模块参数里随时开关。",
-          "descriptionQx": "每次上传后手机弹出通知，告诉你上传成功还是失败。Quantumult X 没有模块参数，以后想改需要回到这里改好后重新安装模块。"
+          "description": "用于告知上传结果 代理软件内可控制通知开关",
+          "descriptionQx": "用于告知上传结果 调整开关后需要重新安装模块"
         },
         "regions": {
           "title": "选择区服",
-          "description": "选择需要上传数据的游戏服务器（可多选）"
+          "description": ""
         },
         "dataTypes": {
           "title": "选择数据类型",
-          "description": "选择需要上传的数据类型（可多选）"
+          "description": ""
         }
       },
       "uploadCode": {
         "title": "上传码",
-        "description": "模块用它来证明是你在上传；泄露后请重新生成。",
+        "description": "一人一码 泄露后建议重新生成",
         "regenerate": "重新生成",
         "generate": "生成上传码",
         "loginRequired": "请先登录",
         "loginAction": "去登录",
         "regenerateDialog": {
           "title": "重新生成上传码？",
-          "description": "旧的上传码会立即失效，已安装的模块需要用新 URL 重新安装才能继续上传。",
+          "description": "旧的上传码和模块会立即失效，需要重新安装新的模块",
           "confirm": "重新生成"
         }
       },
@@ -366,15 +366,15 @@ export default {
       "dataTypes": {
         "suite": {
           "label": "账号数据（Suite）",
-          "description": "上传你的游戏账号的完整数据"
+          "description": ""
         },
         "mysekai": {
           "label": "烤森数据（MySekai）",
-          "description": "上传你的游戏账号的烤森数据"
+          "description": ""
         },
         "mysekai_force": {
-          "label": "烤森数据（每次进入都上传）",
-          "description": "不管游戏里有没有变化，每次进入烤森都重新上传一次。"
+          "label": "烤森数据（强制完整上传）",
+          "description": "强制上传完整的烤森数据"
         },
         "mysekai_birthday_party": {
           "label": "烤森生日派对",
@@ -385,7 +385,7 @@ export default {
         "loginRequired": "请先登录",
         "generateCodeSuccess": "上传码生成成功",
         "generateCodeFailedTitle": "生成上传码失败",
-        "generateCodeFailedFallback": "请先确认已登录，稍后重试。",
+        "generateCodeFailedFallback": "请先确认已登录，稍后重试",
         "copyEmpty": "复制内容为空",
         "clipboardUnsupported": "当前环境不支持剪贴板操作",
         "copySuccess": "{label}已复制到剪贴板",
@@ -393,7 +393,7 @@ export default {
         "qxScriptFallback": "Quantumult X 不支持脚本上传模式，已切换为代理模式",
         "unsupportedClient": "不支持的客户端",
         "installUnsupported": "当前环境不支持快速安装",
-        "installNeedsIos": "快速安装需要在 iPhone / iPad 上打开本页。电脑上请复制模块 URL，在代理软件里手动添加。"
+        "installNeedsIos": "快速安装仅支持 iPhone / iPad"
       }
     },
     "uploadData": {
@@ -404,7 +404,7 @@ export default {
       "group2Label": "2 群",
       "intro": {
         "title": "上传数据",
-        "description": "「上传数据」是把你的游戏账号数据同步到工具箱，供卡牌、活动记录、组卡等功能使用。推荐方式：iPhone/iPad 用「iOS 模块」，Android/Windows 用 HarukiProxy；两者都不行时再用「引继码」。",
+        "description": "",
         "iosPlatform": "iPhone / iPad",
         "iosMethod": "iOS 模块（推荐）",
         "proxyPlatform": "Android / Windows",
@@ -420,20 +420,20 @@ export default {
       },
       "proxyTab": {
         "upgradeWarning": {
-          "title": "旧版 HarukiProxy（v1/v2）已停止上传",
-          "deadline": "旧版上传功能已于 2026 年 11 月 1 日 0 点（北京时间）下线，现已无法上传数据到工具箱。",
-          "upgrade": "请更换到 v3 版本。",
+          "title": "旧版 HarukiProxy（v1/v2）已失效",
+          "deadline": "旧版本已于 2026 年 11 月 1 日 0 点（北京时间）失效",
+          "upgrade": "请更换到 v3 版本上传数据",
           "release": "本公告发布时的最新版本：HarukiProxy {version}",
           "windowsDownload": "Windows x64 下载（暂无教程）",
-          "androidDownload": "Android arm64 下载（有光速虚拟机教程）",
-          "feedback": "v3 版本可能仍有一些问题。如果遇到问题，请及时反馈，以便修复。"
+          "androidDownload": "Android arm64 下载",
+          "feedback": "使用此版本如果遇到问题，请及时提交工单反馈告知开发者"
         },
         "title": "HarukiProxy（Android / 电脑）",
-        "description": "在 Android 手机或电脑上运行 HarukiProxy，进游戏时数据会自动上传到工具箱。",
+        "description": "",
         "steps": {
-          "install": "下载并安装 v3 版本；Android 用户可参考下方光速虚拟机教程。",
-          "bind": "先在「游戏账号管理」绑定并验证要上传的游戏账号。",
-          "run": "开启 HarukiProxy 后进入游戏主页一次，首页「我的账号」会显示上传时间。"
+          "install": "下载并安装 v3 版本；Android 用户可参考下方光速虚拟机教程",
+          "bind": "前往「游戏账号管理」绑定并验证要上传的游戏账号",
+          "run": "启动 HarukiProxy 后进入游戏主页完成数据上传"
         },
         "downloads": {
           "title": "下载 HarukiProxy v3"
@@ -454,7 +454,7 @@ export default {
       "disabledReason": {
         "loginRequired": "请先登录再使用此功能",
         "noBoundAccount": "您还没有绑定任何账号，请先绑定账号",
-        "noWritableAccount": "还没有可以上传的账号。请先在「游戏账号管理」完成账号验证；如果是帮别人上传，需要对方先授权你代传。"
+        "noWritableAccount": "还没有可以上传的账号请先在「游戏账号管理」完成账号验证；如果是帮别人上传，需要对方先授权你代传"
       },
       "uploadStatus": {
         "uploading": "正在上传您的{dataType}数据...",
@@ -472,14 +472,14 @@ export default {
         "uploadSuccessTitle": "上传成功",
         "uploadSuccessFileFallback": "文件已上传",
         "uploadFailedTitle": "上传失败",
-        "uploadFailedFallback": "上传没有成功，请检查文件和账号后重试；多次失败请提交工单。",
+        "uploadFailedFallback": "上传没有成功，请检查文件和账号后重试；多次失败请提交工单",
         "inheritIdRequired": "请输入引继 ID",
         "inheritPasswordRequired": "请输入引继密码",
         "inheritIdInvalidDescription": "引继 ID 应为 16 位英文字母与数字的组合（区分大小写）"
       },
       "fileTab": {
         "title": "手动上传文件",
-        "description": "上传你用 HarukiProxy 或 iOS 模块保存下来的数据文件。一般不需要手动上传：「iOS 模块」和「HarukiProxy」标签页里的方式会自动上传。",
+        "description": "",
         "unavailableTitle": "无法使用",
         "loginRequiredTitle": "需要登录",
         "forbiddenTitle": "操作已被禁止",
@@ -488,7 +488,7 @@ export default {
           "file": "上传文件",
           "chooseFile": "选择文件",
           "noFile": "未选择文件",
-          "fileHint": "选择 HarukiProxy 或 iOS 模块保存下来的数据文件，文件会原样上传。",
+          "fileHint": "可选择 HarukiProxy 或 iOS 模块保存下来的数据文件",
           "account": "选择账号（区服 / UID）",
           "accountPlaceholder": "请选择可上传的账号",
           "dataType": "选择数据类型",
@@ -501,21 +501,21 @@ export default {
         "refreshTargets": "刷新账号",
         "targetsLoading": "正在加载可上传账号...",
         "targetsFailedTitle": "无法获取可上传账号列表",
-        "targetsFailedDescription": "已暂时显示你本人的已验证账号；他人授权的账号需刷新后才会出现。",
-        "accountNotWritable": "这个账号还不能上传：账号未验证，或对方没有允许你代传。",
+        "targetsFailedDescription": "已暂时显示你本人的已验证账号；他人授权的账号需刷新后才会出现",
+        "accountNotWritable": "这个账号还不能上传：账号未验证，或对方没有允许你代传",
         "unavailableChip": "不可用",
-        "someAccountsUnavailable": "灰色的账号暂时不能上传：账号未验证，或对方没有允许你代传。",
-        "grantedTargetNotice": "这是他人授权给你的账号，上传会直接更新对方账号在工具箱中的数据。",
-        "dataTypeLimited": "该账号仅允许上传部分数据类型。",
+        "someAccountsUnavailable": "灰色的账号暂时不能上传：账号未验证，或对方没有允许你代传",
+        "grantedTargetNotice": "这是他人授权给你的账号，上传会直接更新对方账号在工具箱中的数据",
+        "dataTypeLimited": "该账号仅允许上传部分数据类型",
         "submit": "提交",
         "submitting": "提交中..."
       },
       "inheritTab": {
         "title": "引继码上传数据",
-        "description": "输入游戏里的引继 ID 和引继密码。工具箱会先读取账号信息让你核对，你确认后才会执行引继，并马上为你签发新的引继码。",
+        "description": "",
         "loginRequired": {
           "title": "请先登录 Haruki 工具箱",
-          "description": "引继码上传需要先登录本网站。引继后，新引继码会加密保存在你的引继码保险库中，只有你本人能查看。",
+          "description": "引继码上传需要先登录本网站引继后，新引继码会加密保存在你的引继码保险库中，只有你本人能查看",
           "action": "去登录"
         },
         "fields": {
@@ -529,41 +529,41 @@ export default {
           "dataTypePlaceholder": "请选择数据类型"
         },
         "prep": {
-          "bind": "先在「游戏账号管理」绑定这个游戏账号，否则即使提示上传成功，数据也不会保存。",
+          "bind": "请先前往「游戏账号管理」绑定对应游戏账号 否则即使上传成功，数据也不会保存",
           "bindLink": "去绑定",
-          "platformLink": "建议先在游戏内的引继菜单里把账号绑定到 Game Center（iOS）或 Google Play 游戏（Android），日服还可以绑定 Apple 账号或 Google 账号。这样即使引继码过期或用掉，账号也不会丢。",
-          "mysekaiQQ": "上传烤森数据需要先在「HarukiBot 数据授权」绑定并验证 QQ。",
+          "platformLink": "引继前建议先在游戏内把游戏账号绑定到 Game Center（iOS）或 Google Play 游戏（Android）等登录途径避免因为引继码失效导致账号丢失",
+          "mysekaiQQ": "上传烤森数据需要先绑定并验证 QQ",
           "mysekaiQQLink": "去验证"
         },
         "newPassword": {
           "label": "新引继码密码",
           "reuse": "沿用本次密码",
-          "reuseHint": "新引继码使用你刚输入的密码，方便记忆。",
+          "reuseHint": "新引继码沿用你输入的引继密码",
           "random": "随机生成",
-          "randomHint": "生成 12 位字母与数字组成的随机密码。",
-          "reuseBlocked": "这个密码不能沿用：需为 8–16 个半角字母、数字或符号，且不含空格，请改选「随机生成」",
+          "randomHint": "生成 12 位字母与数字组成的随机密码",
+          "reuseBlocked": "引继密码需为 8–16 个半角字母或数字，且不含空格",
           "tooLong": "引继密码过长"
         },
         "alerts": {
           "notesTitle": "了解更多：引继流程、保存的内容和风险",
           "warning1": {
-            "title": "执行引继后，原手机会被登出",
-            "description": "之后要用工具箱签发的新引继码把账号恢复到手机。你会先看到账号信息，确认后才会执行。"
+            "title": "执行引继后，原登录设备会被登出",
+            "description": "Haruki工具箱会签发新的引继码以供登录 签发前需要手动确认账号信息"
           },
           "flow": {
             "title": "流程",
-            "step1": "先只读取账号信息（不会使用引继码），请核对昵称和等级。引继码 24 小时内有效，只能使用一次。",
-            "step2": "核对无误后，输入 Haruki 工具箱登录密码确认（用 Google、Apple 或通行密钥登录的账号改用保险库 PIN），才会执行引继。确认前随时可以取消，引继码仍然有效。",
-            "step3": "执行后立即签发新的引继码并显示在本页，同时加密保存到下方的引继码保险库，24 小时内可以再次查看。",
-            "step4": "最后获取并保存游戏数据。即使这一步失败，新引继码也会保留。"
+            "step1": "先只读取账号信息（不会使用引继码），请核对昵称和等级引继码 24 小时内有效，只能使用一次",
+            "step2": "核对无误后，输入 Haruki 工具箱登录密码确认（用 Google、Apple 或通行密钥登录的账号改用保险库 PIN），才会执行引继确认前随时可以取消，引继码仍然有效",
+            "step3": "执行后立即签发新的引继码并显示在本页，同时加密保存到下方的引继码保险库，24 小时内可以再次查看",
+            "step4": "最后获取并保存游戏数据即使这一步失败，新引继码也会保留"
           },
           "storage": {
             "title": "我们保存什么",
-            "text": "你输入的引继码只在本次引继中使用，不会保存。引继后，游戏账号的登录信息（最多 7 天，用于重新签发引继码）和新引继码（24 小时）会加密保存，只有用你的 Haruki 工具箱登录密码或保险库 PIN 才能打开，管理员也看不到。你可以随时在下方保险库中删除。"
+            "text": "你输入的引继码只在本次引继中使用，不会保存引继后，游戏账号的登录信息（最多 7 天，用于重新签发引继码）和新引继码（24 小时）会加密保存，只有用你的 Haruki 工具箱登录密码或保险库 PIN 才能打开，管理员也看不到你可以随时在下方保险库中删除"
           },
           "risk": {
             "title": "风险说明",
-            "text": "本功能会用你的引继码模拟游戏客户端登录。官方理论上可能将其视为异常登录，请自行评估风险；不放心请改用 HarukiProxy 或 iOS 模块。"
+            "text": "本功能会用你的引继码模拟游戏客户端登录官方理论上可能将其视为异常登录，请自行评估风险；不放心请改用 HarukiProxy 或 iOS 模块"
           }
         },
         "submit": "读取账号信息",
@@ -635,53 +635,53 @@ export default {
           "hide": "收起没有执行的 {count} 步"
         },
         "announce": {
-          "created": "已开始读取账号信息，进度显示在下方。",
-          "awaiting_confirm": "账号信息已读取，请核对并确认。",
-          "new_code": "新的引继码已签发，请记下。"
+          "created": "已开始读取账号信息，进度显示在下方",
+          "awaiting_confirm": "账号信息已读取，请核对并确认",
+          "new_code": "新的引继码已签发，请记下"
         },
         "resumeFailed": {
           "title": "有一次引继可能正在进行，但暂时无法连接",
-          "description": "{reason}连接恢复后会继续显示它的进度；也可以直接重新提交，工具箱会接回正在进行的引继。",
+          "description": "{reason}连接恢复后会继续显示它的进度；也可以直接重新提交，工具箱会接回正在进行的引继",
           "retry": "重试连接"
         },
         "codeValidity": {
-          "valid": "你输入的引继码没有被使用，仍然有效。",
-          "used": "你输入的引继码已被使用，不能再用。",
-          "unknown": "无法确定你输入的引继码是否已被使用。请先不要在其他设备上使用它，并查看下方保险库。"
+          "valid": "你输入的引继码没有被使用，仍然有效",
+          "used": "你输入的引继码已被使用，不能再用",
+          "unknown": "无法确定你输入的引继码是否已被使用请先不要在其他设备上使用它，并查看下方保险库"
         },
         "errorTitle": "引继未完成",
         "issueFailedTitle": "未能签发新引继码",
         "cancelledTitle": "已取消",
         "succeededTitle": "上传完成",
-        "succeededDescription": "账号数据已保存。",
-        "expired": "这次引继的进度记录已过期（只保留 1 小时）。新引继码仍可在下方保险库中查看。",
+        "succeededDescription": "账号数据已保存",
+        "expired": "这次引继的进度记录已过期（只保留 1 小时）新引继码仍可在下方保险库中查看",
         "errors": {
-          "inherit_invalid": "引继码无效、已使用或已过期。请在游戏中重新生成引继码后再试。",
-          "inherit_restricted": "游戏目前不允许这个账号引继。没有执行引继，引继码仍然有效。",
-          "transfer_restricted": "活动期间这个账号的引继次数已用完。没有执行引继，引继码仍然有效。",
-          "confirm_timeout": "5 分钟内没有确认，已自动取消。没有执行引继，引继码仍然有效，可以重新提交。",
-          "cancelled": "已取消，没有执行引继。",
-          "game_degraded": "游戏服务器暂时不稳定，没有执行引继，请稍后再试。",
-          "server_busy": "现在使用的人太多，没有执行引继，请稍后再试。",
-          "game_maintenance": "游戏服务器正在维护，请维护结束后再试。",
-          "game_unavailable": "暂时无法连接游戏服务器，请稍后再试。",
-          "game_error": "游戏服务器返回了错误，请稍后再试。",
-          "game_version_outdated": "游戏刚更新了数据版本，工具箱还没同步上，请稍后再试。",
-          "game_version_outdated_after_transfer": "游戏刚更新了数据版本，工具箱还没同步上，没能获取游戏数据。新引继码（如已签发）显示在本页，稍后可以用新引继码重新上传。",
-          "execute_uncertain": "执行引继时网络中断，无法确定引继码是否已被使用。请先不要在其他设备上使用这组引继码，并查看下方保险库：如果里面出现了这个账号，说明引继已完成，可以在那里查看或重新签发引继码。",
-          "login_failed": "引继已完成，登录信息已存入保险库，但登录游戏失败。请稍后在下方保险库中点「重新签发」，获取新的引继码。",
-          "fetch_failed": "获取游戏数据失败。新引继码（如已签发）显示在本页，并已保存在保险库中。",
-          "mysekai_unavailable": "获取烤森数据失败，可能还没有完成烤森教程。新引继码（如已签发）显示在本页，并已保存在保险库中。",
-          "upload_failed": "数据保存失败。新引继码（如已签发）显示在本页，并已保存在保险库中。",
-          "upload_forbidden": "这个游戏账号已被其他 Haruki 工具箱用户绑定，无法上传。新引继码（如已签发）显示在本页，并已保存在保险库中。",
-          "job_interrupted": "服务器重启，这次引继中断了。",
-          "internal_error": "服务器出了点问题，这次引继没有完成。"
+          "inherit_invalid": "引继码无效、已使用或已过期请在游戏中重新生成引继码后再试",
+          "inherit_restricted": "游戏目前不允许这个账号引继没有执行引继，引继码仍然有效",
+          "transfer_restricted": "活动期间这个账号的引继次数已用完没有执行引继，引继码仍然有效",
+          "confirm_timeout": "5 分钟内没有确认，已自动取消没有执行引继，引继码仍然有效，可以重新提交",
+          "cancelled": "已取消，没有执行引继",
+          "game_degraded": "游戏服务器暂时不稳定，没有执行引继，请稍后再试",
+          "server_busy": "现在使用的人太多，没有执行引继，请稍后再试",
+          "game_maintenance": "游戏服务器正在维护，请维护结束后再试",
+          "game_unavailable": "暂时无法连接游戏服务器，请稍后再试",
+          "game_error": "游戏服务器返回了错误，请稍后再试",
+          "game_version_outdated": "游戏刚更新了数据版本，工具箱还没同步上，请稍后再试",
+          "game_version_outdated_after_transfer": "游戏刚更新了数据版本，工具箱还没同步上，没能获取游戏数据新引继码（如已签发）显示在本页，稍后可以用新引继码重新上传",
+          "execute_uncertain": "执行引继时网络中断，无法确定引继码是否已被使用请先不要在其他设备上使用这组引继码，并查看下方保险库：如果里面出现了这个账号，说明引继已完成，可以在那里查看或重新签发引继码",
+          "login_failed": "引继已完成，登录信息已存入保险库，但登录游戏失败请稍后在下方保险库中点「重新签发」，获取新的引继码",
+          "fetch_failed": "获取游戏数据失败新引继码（如已签发）显示在本页，并已保存在保险库中",
+          "mysekai_unavailable": "获取烤森数据失败，可能还没有完成烤森教程新引继码（如已签发）显示在本页，并已保存在保险库中",
+          "upload_failed": "数据保存失败新引继码（如已签发）显示在本页，并已保存在保险库中",
+          "upload_forbidden": "这个游戏账号已被其他 Haruki 工具箱用户绑定，无法上传新引继码（如已签发）显示在本页，并已保存在保险库中",
+          "job_interrupted": "服务器重启，这次引继中断了",
+          "internal_error": "服务器出了点问题，这次引继没有完成"
         },
         "warnings": {
-          "issue_code_failed": "没能签发新的引继码。登录信息已存入保险库，请马上在下方保险库中点「重新签发」：这是你回到账号的唯一方式。",
-          "vault_db_unavailable": "数据库暂时不可用，登录信息已临时保存，稍后会自动转存，不影响使用。",
-          "vault_store_failed": "登录信息或新引继码没能存入保险库。请务必现在就记下本页显示的新引继码。",
-          "game_version_outdated": "游戏刚更新了数据版本，工具箱还没同步上，所以这一步没有成功。"
+          "issue_code_failed": "没能签发新的引继码登录信息已存入保险库，请马上在下方保险库中点「重新签发」：这是你回到账号的唯一方式",
+          "vault_db_unavailable": "数据库暂时不可用，登录信息已临时保存，稍后会自动转存，不影响使用",
+          "vault_store_failed": "登录信息或新引继码没能存入保险库请务必现在就记下本页显示的新引继码",
+          "game_version_outdated": "游戏刚更新了数据版本，工具箱还没同步上，所以这一步没有成功"
         },
         "actions": {
           "startNew": "开始新的上传",
@@ -696,7 +696,7 @@ export default {
         },
         "confirm": {
           "title": "确认要引继的账号",
-          "description": "请核对账号信息。现在还没有使用你的引继码，取消也不会有任何影响。",
+          "description": "请核对账号信息现在还没有使用你的引继码，取消也不会有任何影响",
           "nickname": "昵称",
           "rank": "等级",
           "userId": "游戏 ID",
@@ -704,41 +704,41 @@ export default {
             "title": "活动期间的引继限制",
             "active": "该账号正处于活动期间的引继限制中",
             "remaining": "剩余可引继次数：{count}",
-            "consumes": "在工具箱执行引继会用掉 1 次；用完后游戏不再允许引继。",
+            "consumes": "在工具箱执行引继会用掉 1 次；用完后游戏不再允许引继",
             "endsAt": "限制结束时间：{time}",
             "worldBloom": "World Link 章节进行中",
-            "none": "当前没有引继限制。"
+            "none": "当前没有引继限制"
           },
-          "warningTitle": "确认后，你的手机将无法再登录这个账号",
-          "warningBody": "账号会转移到工具箱。随后本页会显示新的引继码，请用它在手机上把账号引继回来。",
-          "deadline": "请在 {time} 内确认，超时会自动取消（引继码仍然有效）。",
+          "warningTitle": "确认后，将无法再使用这个引继码",
+          "warningBody": "随后工具箱会签发新的引继码，请使用新的引继码重新登录账号",
+          "deadline": "请在 {time} 内确认，超时自动取消（引继码仍然有效）",
           "password": "Haruki 工具箱登录密码",
-          "passwordHelp": "登录本网站时用的密码，不是游戏的引继密码，也不是 QQ 或 Google 的密码。",
-          "passwordWhy": "用来给保存的登录信息上锁，只有你能打开。",
-          "passwordFirstUse": "用来给保存的登录信息上锁，只有你能打开。第一次确认时会自动创建你的引继码保险库。",
+          "passwordHelp": "登录本网站时用的密码，不是游戏的引继密码，也不是 QQ 或 Google 的密码",
+          "passwordWhy": "",
+          "passwordFirstUse": "",
           "forgotPassword": "忘记密码？",
-          "forgotPasswordNote": "如果忘记密码并设置了新密码，保险库里已保存的内容将无法打开，只能重置保险库（这些内容会被删除）。",
+          "forgotPasswordNote": "如果忘记密码并设置了新密码，保险库里已保存的内容将无法打开，只能重置保险库（这些内容会被删除）",
           "pin": "保险库 PIN",
-          "pinHint": "你用 Google、Apple 或通行密钥登录本网站，没有登录密码，所以这里用你之前设置的保险库 PIN 代替。",
+          "pinHint": "使用 Google、Apple 或通行密钥登录本网站的用户需要验证保险库 PIN ",
           "pinCreate": "设置保险库 PIN",
-          "pinCreateHint": "你用 Google、Apple 或通行密钥登录本网站，没有登录密码，所以需要单独设置一个 PIN。",
-          "pinCreateWhy": "PIN 用来给保存的登录信息上锁，以后查看或重新签发引继码时都要输入。至少 8 个字符。",
-          "pinCreateWarning": "PIN 无法找回。忘记后只能重置保险库，已保存的内容会被删除。",
+          "pinCreateHint": "使用 Google、Apple 或通行密钥登录本网站的用户需要单独设置一个 PIN",
+          "pinCreateWhy": "PIN 用来给保存的登录信息上锁，以后查看或重新签发引继码时都要输入至少 8 个字符",
+          "pinCreateWarning": "PIN 无法找回忘记后只能重置保险库，已保存的内容会被删除",
           "pinRepeat": "再输入一次 PIN",
           "pinMismatch": "两次输入的 PIN 不一致，请重新输入",
           "pinFormat": "PIN 至少 8 个字符，最多 128 个字符",
-          "forgotPin": "忘记 PIN？PIN 无法找回，只能重置保险库（已保存的内容会被删除）。",
+          "forgotPin": "忘记 PIN？PIN 无法找回，只能重置保险库（已保存的内容会被删除）",
           "passwordRequired": "请输入 Haruki 工具箱登录密码",
           "previousPassword": "修改前的旧登录密码",
           "previousPasswordRequired": "请输入修改前的旧登录密码",
           "submit": "确认并执行引继",
           "submitting": "正在验证…",
-          "cancel": "取消，不执行引继",
+          "cancel": "取消执行",
           "cancelling": "正在取消…"
         },
         "newCode": {
           "title": "你的新引继码",
-          "description": "请现在就在手机上用这组引继码把账号引继回来，或妥善记下。",
+          "description": "请现在就在设备上用这组引继码把账号引继回来，或妥善记下",
           "inheritId": "引继 ID",
           "password": "引继密码",
           "copy": "复制{label}",
@@ -746,26 +746,26 @@ export default {
           "copyFailed": "复制失败，请手动抄写",
           "expiresIn": "剩余有效期 {time}",
           "expiresAt": "有效期至 {time}",
-          "expired": "这组引继码已过期，请在保险库中重新签发。",
-          "singleUse": "24 小时内有效，只能使用一次。",
-          "savedToVault": "已加密保存到下方保险库，24 小时内可以再次查看。",
+          "expired": "这组引继码已过期，请在保险库中重新签发",
+          "singleUse": "24 小时内有效，只能使用一次",
+          "savedToVault": "已加密保存到下方保险库，24 小时内可以再次查看",
           "nextSteps": {
             "title": "接下来",
-            "restore": "在手机上用这组引继码把账号引继回来。",
-            "platformLink": "恢复后，建议在游戏内的引继菜单里把账号绑定到 Game Center（iOS）或 Google Play 游戏（Android；日服还可以绑定 Apple 或 Google 账号），以后就不用再依赖引继码。",
-            "cleanup": "确认恢复后，在下方保险库点「我已在手机上恢复」，删除保存的记录。"
+            "restore": "在设备上用这组引继码把账号引继回来",
+            "platformLink": "恢复后，建议在游戏内的引继菜单里把账号绑定到 Game Center（iOS）或 Google Play 游戏（Android；日服还可以绑定 Apple 或 Google 账号），以后就不用再依赖引继码",
+            "cleanup": "确认恢复后，在下方保险库点「我已在设备上恢复」，删除保存的记录"
           },
           "unsavedTitle": "立即记下这组引继码",
-          "unsavedBody": "这组引继码没能存入保险库，离开本页后就无法再查看。请现在就抄下来或截图保存。",
+          "unsavedBody": "这组引继码没能存入保险库，离开本页后就无法再查看请现在就抄下来或截图保存",
           "ack": "我已记下",
           "acked": "已确认记下"
         }
       },
       "inheritVault": {
         "title": "引继码保险库",
-        "description": "新引继码（保存 24 小时）和用于重新签发的游戏登录信息（保存 7 天）加密保存在这里。查看时需要验证身份（{secret}）。",
-        "empty": "保险库里还没有记录。",
-        "notInitialized": "你还没有使用过保险库，第一次确认引继时会自动创建。",
+        "description": "新引继码（保存 24 小时）和用于重新签发的游戏登录信息（保存 7 天）加密保存在这里查看时需要验证身份（{secret}）",
+        "empty": "保险库里还没有记录",
+        "notInitialized": "你还没有使用过保险库，第一次确认引继时会自动创建",
         "loadFailed": "无法加载保险库",
         "refresh": "刷新",
         "entry": {
@@ -777,7 +777,7 @@ export default {
           "expired": "已过期",
           "noCode": "无可查看的引继码",
           "currentCode": "当前引继码",
-          "unreadable": "这条记录在保险库重置前保存，已无法打开。",
+          "unreadable": "这条记录在保险库重置前保存，已无法打开",
           "pending": "暂存中，稍后自动转存，可正常使用"
         },
         "actions": {
@@ -789,23 +789,23 @@ export default {
         },
         "reveal": {
           "title": "查看引继码",
-          "description": "验证身份后显示这条记录的引继码。每次查看都会向你已验证的邮箱发送通知。"
+          "description": "验证身份后显示这条记录的引继码每次查看都会向你已验证的邮箱发送通知"
         },
         "reissue": {
           "title": "重新签发引继码",
-          "description": "工具箱会用保存的登录信息登录游戏，签发一组新的引继码，之前的引继码会立即失效。需要几秒钟。",
+          "description": "工具箱会用保存的登录信息登录游戏，签发一组新的引继码，之前的引继码会立即失效需要几秒钟",
           "modeLabel": "新引继码密码",
           "reuse": "沿用上一个引继码的密码",
           "random": "随机生成"
         },
         "destroy": {
           "title": "删除这条记录？",
-          "description": "请先确认你已经在手机上把账号引继回来。删除后，就无法再查看或重新签发这个账号的引继码。",
+          "description": "请先确认你已经在手机上把账号引继回来删除后，就无法再查看或重新签发这个账号的引继码",
           "confirm": "确认删除"
         },
         "reset": {
           "title": "重置保险库？",
-          "description": "会删除保险库里的全部记录（{records}），无法撤销。只在想不起旧登录密码（例如忘记密码后设置过新密码）或忘记保险库 PIN 时使用。",
+          "description": "会删除保险库里的全部记录（{records}），无法撤销只在想不起旧登录密码（例如忘记密码后设置过新密码）或忘记保险库 PIN 时使用",
           "records": "{count} 条记录",
           "password": "当前的 Haruki 工具箱登录密码",
           "ack": "我明白全部记录都会被删除",
@@ -814,8 +814,8 @@ export default {
         },
         "passwordChanged": {
           "title": "请输入修改前的旧登录密码",
-          "description": "你修改过 Haruki 工具箱登录密码，但保险库还是用旧密码上锁的。输入一次旧密码后，保险库会改用现在的密码。",
-          "forgot": "想不起旧密码？只能重置保险库，里面已保存的内容会被删除。",
+          "description": "你修改过 Haruki 工具箱登录密码，但保险库还是用旧密码上锁的输入一次旧密码后，保险库会改用现在的密码",
+          "forgot": "想不起旧密码？只能重置保险库，里面已保存的内容会被删除",
           "resetAction": "重置保险库"
         },
         "unlock": {
@@ -827,60 +827,60 @@ export default {
         }
       },
       "inheritErrors": {
-        "invalid_request": "请求格式不正确，请刷新页面后重试。",
-        "invalid_server": "只支持日服和国际服。",
-        "invalid_upload_type": "不支持的数据类型。",
-        "inherit_id_invalid": "引继 ID 格式不正确（应为 16 位字母或数字）。",
-        "inherit_password_invalid": "请输入引继密码（最多 64 个字符）。",
-        "new_password_mode_invalid": "请选择新引继码密码的方式。",
-        "reuse_password_invalid": "这个密码不能沿用（需为 8–16 个半角字符、不含空格），请改选「随机生成」。",
-        "mysekai_requires_qq": "上传烤森（MySekai）数据需要先在「HarukiBot 数据授权」绑定并验证 QQ。",
-        "job_already_running": "你有一个正在进行的引继，请先完成或取消它。",
-        "rate_limited": "提交太频繁了（每小时最多 10 次），请稍后再试。",
-        "server_busy": "现在使用的人太多，请稍后再试。",
-        "game_degraded": "游戏服务器暂时不稳定，请稍后再试。",
-        "vault_unavailable": "引继码上传暂时不可用，请稍后再试。",
-        "identity_unavailable": "暂时无法核对你的账号信息，请稍后再试。",
-        "store_unavailable": "服务暂时不可用，请稍后再试。",
-        "job_not_found": "这次引继的记录不存在或已过期。",
-        "job_not_awaiting_confirm": "这次引继已不在等待确认（可能已确认、已取消或已超时），请查看上方的进度。",
-        "cannot_cancel": "引继已经开始执行，无法再取消。",
-        "unauthenticated": "登录已失效，请重新登录 Haruki 工具箱。",
+        "invalid_request": "请求格式不正确，请刷新页面后重试",
+        "invalid_server": "只支持日服和国际服",
+        "invalid_upload_type": "不支持的数据类型",
+        "inherit_id_invalid": "引继 ID 格式不正确（应为 16 位字母或数字）",
+        "inherit_password_invalid": "请输入引继密码（最多 64 个字符）",
+        "new_password_mode_invalid": "请选择新引继码密码的方式",
+        "reuse_password_invalid": "这个密码不能沿用（需为 8–16 个半角字符、不含空格），请改选「随机生成」",
+        "mysekai_requires_qq": "上传烤森（MySekai）数据需要先在「HarukiBot 数据授权」绑定并验证 QQ",
+        "job_already_running": "你有一个正在进行的引继，请先完成或取消它",
+        "rate_limited": "提交太频繁了（每小时最多 10 次），请稍后再试",
+        "server_busy": "现在使用的人太多，请稍后再试",
+        "game_degraded": "游戏服务器暂时不稳定，请稍后再试",
+        "vault_unavailable": "引继码上传暂时不可用，请稍后再试",
+        "identity_unavailable": "暂时无法核对你的账号信息，请稍后再试",
+        "store_unavailable": "服务暂时不可用，请稍后再试",
+        "job_not_found": "这次引继的记录不存在或已过期",
+        "job_not_awaiting_confirm": "这次引继已不在等待确认（可能已确认、已取消或已超时），请查看上方的进度",
+        "cannot_cancel": "引继已经开始执行，无法再取消",
+        "unauthenticated": "登录已失效，请重新登录 Haruki 工具箱",
         "ws_ticket_invalid": "连接已断开，正在重新连接…",
-        "internal_error": "服务器出了点问题，请稍后再试。",
-        "password_required": "请输入 Haruki 工具箱登录密码。",
-        "vault_pin_required": "请输入保险库 PIN。",
-        "vault_pin_invalid_format": "保险库 PIN 至少 8 个字符，最多 128 个字符。",
-        "password_invalid": "登录密码不正确。请输入登录本网站时用的密码，不是游戏的引继密码。",
-        "vault_pin_invalid": "保险库 PIN 不正确，请再试一次。",
-        "previous_password_invalid": "旧登录密码不正确，请再试一次。想不起来的话，只能重置保险库。",
-        "vault_password_changed": "你修改过登录密码，需要再输入一次修改前的旧密码。",
-        "vault_not_initialized": "你还没有使用过保险库，第一次确认引继时会自动创建。",
-        "unlock_rate_limited": "输错次数太多，为了保护你的账号，请 15 分钟后再试。",
-        "entry_not_found": "这条记录不存在或已过期。",
-        "entry_stale": "这条记录在保险库重置前保存，已无法打开。",
-        "code_not_available": "这条记录目前没有可查看的引继码（已超过 24 小时或未签发），请点「重新签发」。",
-        "no_previous_password": "没有可沿用的旧引继密码，请改选「随机生成」。",
-        "reset_confirmation_required": "请先勾选确认。",
-        "reissue_failed": "重新签发引继码失败，请稍后再试。",
-        "reissue_login_failed": "保存的登录信息已无法登录游戏，可能已经失效。",
-        "reissue_rejected": "游戏服务器拒绝了这次请求，请稍后再试。",
-        "client_update_required": "页面版本过旧，请刷新页面。",
-        "retryAfter": "请在 {seconds} 秒后重试。",
-        "network": "无法连接到服务器，请检查网络后重试。",
-        "unknown": "请求失败（HTTP {status}），请稍后再试。"
+        "internal_error": "服务器出了点问题，请稍后再试",
+        "password_required": "请输入 Haruki 工具箱登录密码",
+        "vault_pin_required": "请输入保险库 PIN",
+        "vault_pin_invalid_format": "保险库 PIN 至少 8 个字符，最多 128 个字符",
+        "password_invalid": "登录密码不正确请输入登录本网站时用的密码，不是游戏的引继密码",
+        "vault_pin_invalid": "保险库 PIN 不正确，请再试一次",
+        "previous_password_invalid": "旧登录密码不正确，请再试一次想不起来的话，只能重置保险库",
+        "vault_password_changed": "你修改过登录密码，需要再输入一次修改前的旧密码",
+        "vault_not_initialized": "你还没有使用过保险库，第一次确认引继时会自动创建",
+        "unlock_rate_limited": "输错次数太多，为了保护你的账号，请 15 分钟后再试",
+        "entry_not_found": "这条记录不存在或已过期",
+        "entry_stale": "这条记录在保险库重置前保存，已无法打开",
+        "code_not_available": "这条记录目前没有可查看的引继码（已超过 24 小时或未签发），请点「重新签发」",
+        "no_previous_password": "没有可沿用的旧引继密码，请改选「随机生成」",
+        "reset_confirmation_required": "请先勾选确认",
+        "reissue_failed": "重新签发引继码失败，请稍后再试",
+        "reissue_login_failed": "保存的登录信息已无法登录游戏，可能已经失效",
+        "reissue_rejected": "游戏服务器拒绝了这次请求，请稍后再试",
+        "client_update_required": "页面版本过旧，请刷新页面",
+        "retryAfter": "请在 {seconds} 秒后重试",
+        "network": "无法连接到服务器，请检查网络后重试",
+        "unknown": "请求失败（HTTP {status}），请稍后再试"
       }
     },
     "pointCalculator": {
       "title": "活动 Pt 控分计算器",
-      "description": "根据目标活动 Pt 和歌曲基础 Pt，反推所需活动加成与可打分数区间。",
+      "description": "根据目标活动 Pt 和歌曲基础 Pt，反推所需活动加成与可打分数区间",
       "tips": {
         "title": "小提示",
         "beta": "测试中",
-        "boostConfig": "控分之前请务必确保您的体力消耗（Live Boost）配置正确，谨防控分失败。",
+        "boostConfig": "控分之前请务必确保您的体力消耗（Live Boost）配置正确，谨防控分失败",
         "testingPrefix": "该功能处于测试状态，",
-        "testingSuffix": "如果遇到任何问题请联系 Haruki Dev Team 进行反馈。",
-        "deckRecommend": "控分结果会有「加成组卡」按钮，方便快速跳转组卡。"
+        "testingSuffix": "如果遇到任何问题请联系 Haruki Dev Team 进行反馈",
+        "deckRecommend": "控分结果会有「加成组卡」按钮，方便快速跳转组卡"
       },
       "fields": {
         "region": "区服",
@@ -888,19 +888,19 @@ export default {
         "loadingMusic": "正在准备歌曲...",
         "musicPlaceholder": "请选择歌曲",
         "musicSearchPlaceholder": "搜索歌曲名、#ID、假名、拼音或罗马音...",
-        "musicEmpty": "没有找到歌曲。",
+        "musicEmpty": "没有找到歌曲",
         "targetPt": "目标活动 Pt",
         "targetPtPlaceholder": "请输入目标活动 Pt",
-        "targetPtInvalid": "目标活动 Pt 需要是大于 0 的整数。",
+        "targetPtInvalid": "目标活动 Pt 需要是大于 0 的整数",
         "maxResults": "输出结果上限",
         "maxResultsPlaceholder": "默认 10",
         "bonusRange": "自定义加成范围",
-        "bonusRangeHelp": "只搜索该范围内的活动加成，默认按 100% 到 435% 计算，可填写 0% 到 1000%。",
+        "bonusRangeHelp": "只搜索该范围内的活动加成，默认按 100% 到 435% 计算，可填写 0% 到 1000%",
         "customBonusFloor": "自定义加成下限",
         "customBonusFloorPlaceholder": "默认 100",
         "customBonusCap": "自定义加成上限",
         "customBonusCapPlaceholder": "默认 435",
-        "bonusRangeInvalid": "加成范围需要是 0 到 1000 之间的整数，且下限不能大于上限。",
+        "bonusRangeInvalid": "加成范围需要是 0 到 1000 之间的整数，且下限不能大于上限",
         "boostIndex": "体力消耗（Live Boost）",
         "boostIndexAll": "全部档位",
         "boostIndexOption": "{index} 火（{rate}倍）",
@@ -915,18 +915,18 @@ export default {
         "music": "歌曲：{value}",
         "basicPoint": "基础 Pt：{value}",
         "bonusRange": "加成范围：{min}% ~ {max}%",
-        "missingBasicPoint": "这首歌暂时没有基础 Pt 数据，请换一首歌或换个难度。"
+        "missingBasicPoint": "这首歌暂时没有基础 Pt 数据，请换一首歌或换个难度"
       },
       "result": {
         "title": "计算结果",
-        "placeholder": "输入目标活动 Pt 后会在这里显示可用方案。",
-        "summary": "共找到 {count} 组方案。",
-        "empty": "还没有计算结果。",
+        "placeholder": "输入目标活动 Pt 后会在这里显示可用方案",
+        "summary": "共找到 {count} 组方案",
+        "empty": "还没有计算结果",
         "deckBonus": "所需加成 {value}%",
         "boost": "{index} 火 / {rate}倍",
         "scoreRangeLabel": "可打分数区间",
         "noMatchTitle": "未找到符合条件的方案",
-        "noMatchDescription": "请尝试调整目标 Pt、体力消耗（Live Boost）或自定义加成上限。"
+        "noMatchDescription": "请尝试调整目标 Pt、体力消耗（Live Boost）或自定义加成上限"
       }
     }
   },
@@ -935,22 +935,22 @@ export default {
     "description": "注册 HarukiBot NEO 实例并获取 Bot 凭据",
     "disabled": {
       "title": "注册暂未开放",
-      "description": "HarukiBot NEO 注册功能当前已关闭，请稍后再试。",
+      "description": "HarukiBot NEO 注册功能当前已关闭，请稍后再试",
       "retryButton": "重试"
     },
     "input": {
       "warningTitle": "注意",
-      "warningDescription": "请使用你本人正在使用的QQ大号（不是接入 HarukiBot NEO 作为 Bot 的QQ号）注册，否则将会被拒绝进入QQ群聊。",
+      "warningDescription": "请使用你本人正在使用的QQ大号（不是接入 HarukiBot NEO 作为 Bot 的QQ号）注册，否则将会被拒绝进入QQ群聊",
       "warningGroup": "NEO 分布式QQ群: 111612548",
       "qqLabel": "QQ 号",
       "qqPlaceholder": "请输入 QQ 号",
-      "hint": "验证码将发送至您的 QQ 邮箱（{qq}{'@'}qq.com），有效期 10 分钟。",
+      "hint": "验证码将发送至您的 QQ 邮箱（{qq}{'@'}qq.com），有效期 10 分钟",
       "hintQqPlaceholder": "你的QQ号",
       "sendButton": "发送验证码",
       "cooldownButton": "{seconds} 秒后可重试"
     },
     "verify": {
-      "codeSentHint": "验证码已发送至 {qq}{'@'}qq.com，请查收邮箱。",
+      "codeSentHint": "验证码已发送至 {qq}{'@'}qq.com，请查收邮箱",
       "codeLabel": "验证码",
       "codePlaceholder": "请输入 6 位验证码",
       "backButton": "返回",
@@ -960,33 +960,33 @@ export default {
     },
     "result": {
       "successTitle": "注册成功",
-      "successDescription": "您的 HarukiBot NEO 实例已创建，请保存以下凭据信息。",
+      "successDescription": "您的 HarukiBot NEO 实例已创建，请保存以下凭据信息",
       "botIdLabel": "Bot ID",
       "credentialLabel": "凭据",
       "copyAction": "复制{label}",
-      "saveWarning": "凭据仅显示一次，请立即复制并安全保存，之后将无法再次获取。",
+      "saveWarning": "凭据仅显示一次，请立即复制并安全保存，之后将无法再次获取",
       "configGeneratorTitle": "继续生成 Client 配置",
-      "configGeneratorDescription": "打开配置生成器并自动填入 Bot ID 与凭据，后续只需补充端口、模块和名单配置。",
+      "configGeneratorDescription": "打开配置生成器并自动填入 Bot ID 与凭据，后续只需补充端口、模块和名单配置",
       "configGeneratorButton": "打开配置生成器",
       "registerAnotherButton": "注册另一个"
     },
     "toast": {
       "statusCheckFailed": "检查注册状态失败",
-      "statusCheckFailedFallback": "请检查网络后点击「重试」；多次失败可能是服务暂时不可用。",
+      "statusCheckFailedFallback": "请检查网络后点击「重试」；多次失败可能是服务暂时不可用",
       "sendFailedTitle": "发送失败",
-      "sendFailedFallback": "验证码没有发出去，请检查 QQ 号后重试；多次失败请稍后再试。",
+      "sendFailedFallback": "验证码没有发出去，请检查 QQ 号后重试；多次失败请稍后再试",
       "missingQQNumber": "请输入 QQ 号",
       "invalidQQNumber": "请输入有效的 QQ 号（5–12 位数字）",
       "rateLimitedTitle": "请求过于频繁",
-      "rateLimitedDescription": "请求次数过多，请在 {seconds} 秒后重试。",
+      "rateLimitedDescription": "请求次数过多，请在 {seconds} 秒后重试",
       "alreadyRegisteredTitle": "已注册",
-      "alreadyRegisteredDescription": "该 QQ 号已有注册的 Bot。",
+      "alreadyRegisteredDescription": "该 QQ 号已有注册的 Bot",
       "registrationDisabledTitle": "注册已关闭",
-      "registrationDisabledDescription": "注册功能当前已关闭。",
+      "registrationDisabledDescription": "注册功能当前已关闭",
       "codeSentTitle": "验证码已发送",
-      "codeSentDescription": "请前往 QQ {qq} 的邮箱查收。",
+      "codeSentDescription": "请前往 QQ {qq} 的邮箱查收",
       "registerFailedTitle": "注册失败",
-      "registerFailedFallback": "注册没有完成，请确认验证码无误后重试；验证码过期请重新发送。",
+      "registerFailedFallback": "注册没有完成，请确认验证码无误后重试；验证码过期请重新发送",
       "missingVerificationCode": "请输入验证码",
       "invalidVerificationCode": "验证码是 6 位数字，请检查后重新输入",
       "incompleteResponse": "返回数据不完整",
@@ -998,7 +998,7 @@ export default {
   },
   "sekaiStation": {
     "title": "协力车站",
-    "description": "实时汇总社交平台上发布的国服协力房间号。",
+    "description": "实时汇总社交平台上发布的国服协力房间号",
     "viewOnSekaiStation": "在Sekai Station中查看",
     "notConfigured": "协力车站暂不可用",
     "connection": {

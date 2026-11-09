@@ -4,7 +4,7 @@ export default {
   "tools": {
     "clientConfigGenerator": {
       "title": "Haruki Client Config Generator",
-      "description": "Generate configs.yaml for the current Haruki Client schema, including dynamic routing, control API, modules, and access policies.",
+      "description": "Generate configs.yaml for the current Haruki Client schema, including dynamic routing, control API, modules, and access policies",
       "summary": {
         "modules": "Modules",
         "admins": "Admins",
@@ -13,23 +13,23 @@ export default {
       "sections": {
         "identity": {
           "title": "Identity",
-          "description": "Set local ports, Bot ID, credential, and optional trust-verification fields."
+          "description": "Set local ports, Bot ID, credential, and optional trust-verification fields"
         },
         "routing": {
           "title": "Network routing",
-          "description": "Configure dynamic primary/alternative cloud endpoints or pin a fixed endpoint."
+          "description": "Configure dynamic primary/alternative cloud endpoints or pin a fixed endpoint"
         },
         "runtime": {
           "title": "Runtime policy",
-          "description": "Control private-chat replies, help, CN features, reply quoting, and global command limits."
+          "description": "Control private-chat replies, help, CN features, reply quoting, and global command limits"
         },
         "modules": {
           "title": "Modules and feature scopes",
-          "description": "Use manifest command_module for base module gating, then the current cloud client_policy_scope for feature-level policy."
+          "description": "Use manifest command_module for base module gating, then the current cloud client_policy_scope for feature-level policy"
         },
         "access": {
           "title": "Access lists",
-          "description": "Enter group blacklists, group whitelists, user blacklists, and Bot admin QQ IDs by scope."
+          "description": "Enter group blacklists, group whitelists, user blacklists, and Bot admin QQ IDs by scope"
         }
       },
       "fields": {
@@ -65,22 +65,22 @@ export default {
         },
         "controlApiAccessToken": {
           "label": "Control API access token",
-          "description": "When enabled, the control API requires a Bearer token. Disabled writes null.",
+          "description": "When enabled, the control API requires a Bearer token. Disabled writes null",
           "placeholder": "Local control API token"
         },
         "serverEndpointOverride": {
           "label": "Pinned server endpoint",
           "placeholder": "Leave empty unless the group announces one",
-          "help": "Only fill this when a group notice asks you to pin an endpoint."
+          "help": "Only fill this when a group notice asks you to pin an endpoint"
         },
         "routingConfigURL": {
           "label": "Routing config URL",
           "placeholder": "Leave empty to use the built-in routing-v3.json URL",
-          "help": "Used for production/alternative failover. Ignored when a pinned endpoint is set."
+          "help": "Used for production/alternative failover. Ignored when a pinned endpoint is set"
         },
         "enableDynamicRouting": {
           "label": "Enable dynamic routing",
-          "description": "Enabled by default. Turn it off to use only the built-in endpoint and keyset-approved endpoints."
+          "description": "Enabled by default. Turn it off to use only the built-in endpoint and keyset-approved endpoints"
         },
         "runMode": {
           "label": "Run mode",
@@ -92,7 +92,7 @@ export default {
         },
         "enableGroupCommandLimit": {
           "label": "Enable global command limit",
-          "description": "Limit successful calls across all groups per hour/day. 0 means unlimited."
+          "description": "Limit successful calls across all groups per hour/day. 0 means unlimited"
         },
         "globalCommandHourlyLimit": {
           "label": "Hourly limit"
@@ -103,7 +103,7 @@ export default {
         "mysekaiBirthdayMonitorMode": {
           "label": "Birthday material delivery mode",
           "placeholder": "Select list mode",
-          "help": "Controls birthday material monitor deliveries only, independently of the command run mode."
+          "help": "Controls birthday material monitor deliveries only, independently of the command run mode"
         },
         "mysekaiBirthdayMonitorBlacklist": {
           "label": "Birthday delivery group blacklist",
@@ -116,12 +116,12 @@ export default {
         "enableModules": {
           "label": "Enabled modules",
           "placeholder": "Select module",
-          "help": "Choose command_module values from the dropdown. all enables every module. card/music/mysekai are cloud-side categories, not base module names here."
+          "help": "Choose command_module values from the dropdown. all enables every module. card/music/mysekai are cloud-side categories, not base module names here"
         },
         "featurePolicyModes": {
           "label": "Feature policy modes",
           "placeholder": "Select feature scope",
-          "help": "Add rows only when a feature needs to override the global run mode. Leave this empty when no feature has a separate policy."
+          "help": "Add rows only when a feature needs to override the global run mode. Leave this empty when no feature has a separate policy"
         },
         "blacklists": {
           "label": "Group blacklists",
@@ -138,41 +138,41 @@ export default {
         "botAdmins": {
           "label": "Bot admin QQ IDs",
           "placeholder": "114514\n1919810",
-          "help": "Admins can use Haruki Client control commands in groups."
+          "help": "Admins can use Haruki Client control commands in groups"
         }
       },
       "toggles": {
         "enableHelp": {
           "label": "Help command",
-          "description": "Allow built-in help replies."
+          "description": "Allow built-in help replies"
         },
         "enableCN": {
           "label": "CN features",
-          "description": "Enable CN-related features."
+          "description": "Enable CN-related features"
         },
         "enablePrivateMessage": {
           "label": "Reply to private chats",
-          "description": "Private chats bypass group lists but still obey user blacklists and rate limits."
+          "description": "Private chats bypass group lists but still obey user blacklists and rate limits"
         },
         "enableReplyMessage": {
           "label": "Quote replies",
-          "description": "Quote the original message in replies."
+          "description": "Quote the original message in replies"
         },
         "sendBase64Image": {
           "label": "Base64 images",
-          "description": "Fetch Cloud images on the client and send them to OneBot as base64."
+          "description": "Fetch Cloud images on the client and send them to OneBot as base64"
         },
         "mysekaiBirthdayMonitorNotifyEmpty": {
           "label": "Birthday empty notice",
-          "description": "Notify when a MySekai birthday material monitor has no matches."
+          "description": "Notify when a MySekai birthday material monitor has no matches"
         },
         "enableParamEcho": {
           "label": "Parameter echo",
-          "description": "Allow Cloud parse errors to echo concrete parameters."
+          "description": "Allow Cloud parse errors to echo concrete parameters"
         },
         "strictConfigPermissions": {
           "label": "Enforce config permissions",
-          "description": "Refuse to start when configs.yaml is group/world-readable. Set it to mode 0600 before enabling."
+          "description": "Refuse to start when configs.yaml is group/world-readable. Set it to mode 0600 before enabling"
         }
       },
       "actions": {
@@ -194,7 +194,7 @@ export default {
         "scopeLabel": "Feature scope",
         "scopePlaceholder": "Select feature",
         "modePlaceholder": "Select mode",
-        "empty": "Leave this empty when no feature needs its own policy."
+        "empty": "Leave this empty when no feature needs its own policy"
       },
       "accessEditor": {
         "scopeLabel": "Access scope",
@@ -210,9 +210,9 @@ export default {
         "userIdLabel": "User QQ",
         "userIdPlaceholder": "User QQ",
         "botAdminPlaceholder": "Admin QQ",
-        "blacklistsDescription": "Pick a global, module, or feature scope, then add groups to block.",
-        "whitelistsDescription": "Pick a global, module, or feature scope, then add groups to allow.",
-        "userBlacklistsDescription": "Pick a global, module, or feature scope, then add user QQ IDs to block."
+        "blacklistsDescription": "Pick a global, module, or feature scope, then add groups to block",
+        "whitelistsDescription": "Pick a global, module, or feature scope, then add groups to allow",
+        "userBlacklistsDescription": "Pick a global, module, or feature scope, then add user QQ IDs to block"
       },
       "runMode": {
         "blacklist": "Blacklist mode",
@@ -222,49 +222,49 @@ export default {
         "dynamic": "Dynamic routing enabled",
         "pinned": "Server endpoint pinned",
         "builtIn": "Using built-in routing",
-        "dynamicDescription": "The client reads routingConfigURL; when empty, it uses the built-in EdgeOne routing-v3.json URL.",
-        "pinnedDescription": "When serverEndpointOverride is non-empty, the client uses that endpoint directly and does not read dynamic routing config.",
-        "builtInDescription": "Dynamic routing is disabled, so the client uses only its built-in endpoint and keyset-approved endpoints."
+        "dynamicDescription": "The client reads routingConfigURL; when empty, it uses the built-in EdgeOne routing-v3.json URL",
+        "pinnedDescription": "When serverEndpointOverride is non-empty, the client uses that endpoint directly and does not read dynamic routing config",
+        "builtInDescription": "Dynamic routing is disabled, so the client uses only its built-in endpoint and keyset-approved endpoints"
       },
       "preview": {
         "title": "configs.yaml preview",
-        "description": "The YAML updates live and can be copied into the Haruki Client working directory."
+        "description": "The YAML updates live and can be copied into the Haruki Client working directory"
       },
       "prefill": {
         "title": "Filled from registration result",
-        "description": "Bot ID and credential were filled into the config form. ownerId is only shown to confirm the registration source and is not written to configs.yaml.",
+        "description": "Bot ID and credential were filled into the config form. ownerId is only shown to confirm the registration source and is not written to configs.yaml",
         "ownerId": "ownerId: {value}",
         "botId": "Bot ID: {value}",
         "credential": "Credential filled"
       },
       "notes": {
         "title": "Notes",
-        "description": "This generator handles values locally in your browser and does not submit credentials.",
+        "description": "This generator handles values locally in your browser and does not submit credentials",
         "items": {
-          "dynamicRouting": "The new client enables dynamic routing by default; leave routingConfigURL empty to use its built-in routing-v3.json.",
-          "accessToken": "Keep controlApiAccessToken disabled when auth is not needed; YAML will write null.",
-          "listSyntax": "Access lists can be added row by row; the generator merges scopes and IDs into client YAML."
+          "dynamicRouting": "The new client enables dynamic routing by default; leave routingConfigURL empty to use its built-in routing-v3.json",
+          "accessToken": "Keep controlApiAccessToken disabled when auth is not needed; YAML will write null",
+          "listSyntax": "Access lists can be added row by row; the generator merges scopes and IDs into client YAML"
         }
       },
       "toast": {
         "reset": "Reset to defaults",
         "copySuccess": "configs.yaml copied to clipboard",
-        "copyFailed": "Copy failed. Check browser clipboard permission.",
+        "copyFailed": "Copy failed. Check browser clipboard permission",
         "downloadSuccess": "configs.yaml download started"
       }
     },
     "iosModules": {
       "title": "iOS module (iPhone / iPad)",
-      "description": "Generate a proxy module for Shadowrocket, Surge and similar apps; afterwards your data uploads automatically whenever you open the game.",
+      "description": "",
       "tutorialAlert": {
         "label": "Illustrated guide:",
         "linkText": "open",
-        "nonZhWarning": "Please note that this tutorial is only available in Simplified Chinese."
+        "nonZhWarning": "Please note that this tutorial is only available in Simplified Chinese"
       },
       "qxScriptWarning": "Quantumult X does not support script upload mode",
-      "cnRestriction": "Due to legal restrictions, CN MySekai module installation is not provided.",
+      "cnRestriction": "Due to legal restrictions, CN MySekai module installation is not provided",
       "installButton": "Quick Install Module",
-      "installHint": "This opens the proxy app you chose and imports the module",
+      "installHint": "",
       "copyAction": "Copy {label}",
       "copyLabel": {
         "uploadCode": "upload code",
@@ -274,64 +274,64 @@ export default {
       "steps": {
         "configure": {
           "title": "Configure",
-          "description": "Choose the proxy app, server route, and upload mode."
+          "description": ""
         },
         "scope": {
           "title": "Scope",
-          "description": "Choose the regions and data types to upload."
+          "description": "Choose the regions and data types to upload"
         },
         "install": {
           "title": "Get & Install",
-          "prerequisite": "You need to be signed in with a bound game account first.",
-          "description": "Generate an upload code, then copy the URLs or quick install the module.",
-          "after": "After installing, open the game and reach the home screen once; once the upload succeeds, “My account” on the Toolbox home page shows the upload time."
+          "prerequisite": "You need to be signed in with a bound game account first",
+          "description": "",
+          "after": ""
         }
       },
       "sections": {
         "software": {
           "title": "Select app",
-          "description": "Choose the proxy app to install the module into",
+          "description": "Choose a proxy app",
           "placeholder": "Select app"
         },
         "endpoint": {
           "title": "Server route",
-          "description": "Direct works in mainland China; outside it, CDN may be smoother.",
+          "description": "Choose Direct in mainland China and CDN elsewhere",
           "placeholder": "Select route"
         },
         "mode": {
           "title": "Select upload mode",
-          "description": "“Script upload” can run alongside other bots' modules but is occasionally unstable; “Proxy upload” is more stable but only one Toolbox module can be installed at a time. If unsure, pick “Proxy upload”.",
+          "description": "“Script upload” works alongside other bots' modules but may be unstable\n“Proxy upload” is more stable but only one Toolbox module can be installed at a time",
           "placeholder": "Select upload mode"
         },
         "chunk": {
           "title": "Chunk size",
-          "description": "The default is fine for most people. Larger values enter the game faster, but some proxy apps may fail to upload.",
+          "description": "The default works for most people\nLarger values enter the game faster, but some proxy apps may fail to upload",
           "unit": "MB"
         },
         "notify": {
           "title": "Upload notifications",
-          "description": "After each upload your phone shows a notification saying whether it worked. You can also switch it later in the module's arguments in the proxy app.",
-          "descriptionQx": "After each upload your phone shows a notification saying whether it worked. Quantumult X has no module arguments: to change this later, change it here and install the module again."
+          "description": "Shows whether an upload succeeded; control notifications in the proxy app",
+          "descriptionQx": "Shows whether an upload succeeded; reinstall the module to change this setting"
         },
         "regions": {
           "title": "Select regions",
-          "description": "Select game servers to upload data for (multi-select)"
+          "description": ""
         },
         "dataTypes": {
           "title": "Select data types",
-          "description": "Select data types to upload (multi-select)"
+          "description": ""
         }
       },
       "uploadCode": {
         "title": "Upload Code",
-        "description": "The module uses it to prove the upload is yours; regenerate it if it leaks.",
+        "description": "One code per user; regenerate it if exposed",
         "regenerate": "Regenerate",
         "generate": "Generate Upload Code",
         "loginRequired": "Sign in required",
         "loginAction": "Sign in",
         "regenerateDialog": {
           "title": "Regenerate the upload code?",
-          "description": "The old code stops working immediately; any installed module must be reinstalled with the new URL to keep uploading.",
+          "description": "The old code and module stop working immediately; reinstall the new module",
           "confirm": "Regenerate"
         }
       },
@@ -366,15 +366,15 @@ export default {
       "dataTypes": {
         "suite": {
           "label": "Account data (Suite)",
-          "description": "Upload full data for your game account"
+          "description": ""
         },
         "mysekai": {
           "label": "MySekai data",
-          "description": "Upload MySekai data for your game account"
+          "description": ""
         },
         "mysekai_force": {
-          "label": "MySekai data (upload on every visit)",
-          "description": "Re-upload every time you enter MySekai, whether or not anything changed in game."
+          "label": "MySekai data (force full upload)",
+          "description": "Force a full MySekai data upload"
         },
         "mysekai_birthday_party": {
           "label": "MySekai Birthday Party",
@@ -385,15 +385,15 @@ export default {
         "loginRequired": "Please sign in first",
         "generateCodeSuccess": "Upload code generated",
         "generateCodeFailedTitle": "Failed to generate upload code",
-        "generateCodeFailedFallback": "Make sure you are signed in, then try again later.",
+        "generateCodeFailedFallback": "Make sure you are signed in, then try again later",
         "copyEmpty": "Nothing to copy",
         "clipboardUnsupported": "Clipboard is not supported in this environment",
         "copySuccess": "{label} copied to clipboard",
-        "copyFailed": "Failed to copy to clipboard. Check browser permissions.",
-        "qxScriptFallback": "Quantumult X does not support script mode. Switched to proxy mode.",
+        "copyFailed": "Failed to copy to clipboard. Check browser permissions",
+        "qxScriptFallback": "Quantumult X does not support script mode. Switched to proxy mode",
         "unsupportedClient": "Unsupported client",
         "installUnsupported": "Quick install is not supported in this environment",
-        "installNeedsIos": "Quick install needs this page open on an iPhone or iPad. On a computer, copy the module URL and add it in the proxy app by hand."
+        "installNeedsIos": "Quick install is only supported on iPhone or iPad"
       }
     },
     "uploadData": {
@@ -404,7 +404,7 @@ export default {
       "group2Label": "Group 2",
       "intro": {
         "title": "Upload data",
-        "description": "“Upload data” syncs your game account data to the Toolbox for cards, event records, deck building and more. Recommended: the iOS module on iPhone/iPad, HarukiProxy on Android/Windows; use the transfer code only when neither works.",
+        "description": "",
         "iosPlatform": "iPhone / iPad",
         "iosMethod": "iOS module (recommended)",
         "proxyPlatform": "Android / Windows",
@@ -420,20 +420,20 @@ export default {
       },
       "proxyTab": {
         "upgradeWarning": {
-          "title": "HarukiProxy v1/v2 no longer upload",
-          "deadline": "Uploads from the old versions were disabled on 1 Nov 2026 at 00:00 (UTC+8); they can no longer send data to the Toolbox.",
-          "upgrade": "Please update to v3.",
+          "title": "HarukiProxy v1/v2 are no longer supported",
+          "deadline": "The old versions stopped working on 1 Nov 2026 at 00:00 (UTC+8)",
+          "upgrade": "Switch to v3 to upload data",
           "release": "Latest version when this notice was published: HarukiProxy {version}",
           "windowsDownload": "Windows x64 download (no guide yet)",
-          "androidDownload": "Android arm64 download (VPhoneOS guide available)",
-          "feedback": "v3 may still contain bugs. Please report any issues promptly so we can fix them."
+          "androidDownload": "Android arm64 download",
+          "feedback": "If you encounter an issue with this version, submit a ticket for the developers"
         },
         "title": "HarukiProxy (Android / PC)",
-        "description": "Run HarukiProxy on an Android phone or a PC; your data uploads to the Toolbox automatically when you open the game.",
+        "description": "",
         "steps": {
-          "install": "Download and install v3. Android users can follow the VPhoneOS guide below.",
-          "bind": "Bind and verify the game account to upload under Game account bindings first.",
-          "run": "With HarukiProxy on, reach the game's home screen once; “My account” on the Toolbox home page shows the upload time."
+          "install": "Download and install v3. Android users can follow the VPhoneOS guide below",
+          "bind": "Go to Game account bindings and bind and verify the game account to upload",
+          "run": "Start HarukiProxy and open the game's home screen to upload data"
         },
         "downloads": {
           "title": "Download HarukiProxy v3"
@@ -453,11 +453,11 @@ export default {
       },
       "disabledReason": {
         "loginRequired": "Please sign in to use this feature",
-        "noBoundAccount": "No bound accounts found. Please bind an account first.",
-        "noWritableAccount": "No account can be uploaded to yet. Verify your account under Game account bindings first; to upload for someone else, they must grant you upload access first."
+        "noBoundAccount": "No bound accounts found. Please bind an account first",
+        "noWritableAccount": "No account can be uploaded to yet. Verify your account under Game account bindings first; to upload for someone else, they must grant you upload access first"
       },
       "uploadStatus": {
-        "uploading": "Uploading your {dataType} data...",
+        "uploading": "Uploading your {dataType} data..",
         "success": "Upload successful",
         "failed": "Upload failed"
       },
@@ -466,20 +466,20 @@ export default {
         "selectFile": "Please select a file",
         "dataTypeNotWritable": "The selected account has no upload permission for this data type",
         "uploadForbiddenTitle": "Not allowed to upload to this account",
-        "uploadForbiddenDescription": "The grant may have expired, been revoked, or the binding changed. The list of upload targets was reloaded.",
+        "uploadForbiddenDescription": "The grant may have expired, been revoked, or the binding changed. The list of upload targets was reloaded",
         "operationForbiddenTitle": "Submission forbidden",
         "operationForbiddenDescription": "This action is not allowed due to legal restrictions",
         "uploadSuccessTitle": "Upload successful",
         "uploadSuccessFileFallback": "File uploaded",
         "uploadFailedTitle": "Upload failed",
-        "uploadFailedFallback": "The upload did not go through. Check the file and account and retry; if it keeps failing, open a ticket.",
+        "uploadFailedFallback": "The upload did not go through. Check the file and account and retry; if it keeps failing, open a ticket",
         "inheritIdRequired": "Enter the transfer ID",
         "inheritPasswordRequired": "Enter the transfer password",
         "inheritIdInvalidDescription": "The transfer ID must be 16 letters and digits (case-sensitive)"
       },
       "fileTab": {
         "title": "Manual file upload",
-        "description": "Upload a data file saved by HarukiProxy or the iOS module. You normally do not need this: the methods on the “iOS module” and “HarukiProxy” tabs upload automatically.",
+        "description": "",
         "unavailableTitle": "Unavailable",
         "loginRequiredTitle": "Sign in required",
         "forbiddenTitle": "Operation forbidden",
@@ -488,7 +488,7 @@ export default {
           "file": "Upload file",
           "chooseFile": "Choose file",
           "noFile": "No file selected",
-          "fileHint": "Pick a data file saved by HarukiProxy or the iOS module; it is uploaded as-is.",
+          "fileHint": "Select a data file saved by HarukiProxy or the iOS module",
           "account": "Select account (region / UID)",
           "accountPlaceholder": "Select an account you can upload to",
           "dataType": "Select data type",
@@ -499,23 +499,23 @@ export default {
           "goBind": "Bind an account"
         },
         "refreshTargets": "Refresh accounts",
-        "targetsLoading": "Loading upload targets...",
+        "targetsLoading": "Loading upload targets..",
         "targetsFailedTitle": "Could not load upload targets",
-        "targetsFailedDescription": "Showing your own verified accounts for now; accounts granted by others appear after a refresh.",
-        "accountNotWritable": "This account cannot be uploaded to yet: it is unverified, or its owner has not allowed you to upload for them.",
+        "targetsFailedDescription": "Showing your own verified accounts for now; accounts granted by others appear after a refresh",
+        "accountNotWritable": "This account cannot be uploaded to yet: it is unverified, or its owner has not allowed you to upload for them",
         "unavailableChip": "Unavailable",
-        "someAccountsUnavailable": "Greyed-out accounts cannot be uploaded to yet: unverified, or the owner has not allowed you to upload for them.",
-        "grantedTargetNotice": "This account was granted to you by another user. Uploads directly update their data in the Toolbox.",
-        "dataTypeLimited": "Only some data types can be uploaded to this account.",
+        "someAccountsUnavailable": "Greyed-out accounts cannot be uploaded to yet: unverified, or the owner has not allowed you to upload for them",
+        "grantedTargetNotice": "This account was granted to you by another user. Uploads directly update their data in the Toolbox",
+        "dataTypeLimited": "Only some data types can be uploaded to this account",
         "submit": "Submit",
-        "submitting": "Submitting..."
+        "submitting": "Submitting.."
       },
       "inheritTab": {
         "title": "Transfer-code data upload",
-        "description": "Enter the transfer ID and transfer password from the game. The Toolbox first shows you the account to check, runs the transfer only after you confirm, and right away issues you a new transfer code.",
+        "description": "",
         "loginRequired": {
           "title": "Sign in to Haruki Toolbox first",
-          "description": "Transfer-code uploads need you to be signed in to this website. After the transfer, the new transfer code is kept encrypted in your transfer-code vault, readable only by you.",
+          "description": "Transfer-code uploads need you to be signed in to this website. After the transfer, the new transfer code is kept encrypted in your transfer-code vault, readable only by you",
           "action": "Sign in"
         },
         "fields": {
@@ -529,41 +529,41 @@ export default {
           "dataTypePlaceholder": "Select data type"
         },
         "prep": {
-          "bind": "Bind this game account under Game account bindings first; otherwise the data is not saved, even if the upload reports success.",
+          "bind": "Go to Game account bindings and bind the game account first; otherwise the data will not be saved, even if the upload succeeds",
           "bindLink": "Bind account",
-          "platformLink": "We recommend linking the account to Game Center (iOS) or Google Play Games (Android) in the game's transfer menu first; JP can also link an Apple or Google account. Then the account is not lost if a transfer code expires or is used up.",
-          "mysekaiQQ": "Uploading MySekai data requires binding and verifying a QQ account under HarukiBot data authorization.",
+          "platformLink": "Before transferring, link the game account to a sign-in method such as Game Center (iOS) or Google Play Games (Android) in the game, to avoid losing access if the transfer code expires",
+          "mysekaiQQ": "Uploading MySekai data requires binding and verifying a QQ account",
           "mysekaiQQLink": "Verify QQ"
         },
         "newPassword": {
           "label": "Password of the new transfer code",
           "reuse": "Keep this password",
-          "reuseHint": "The new code uses the password you just entered, so it is easy to remember.",
+          "reuseHint": "The new code reuses the transfer password you entered",
           "random": "Generate a random one",
-          "randomHint": "A random password of 12 letters and digits.",
-          "reuseBlocked": "This password cannot be kept: it must be 8–16 half-width letters, digits or symbols without spaces; choose “Generate a random one”",
+          "randomHint": "A random password of 12 letters and digits",
+          "reuseBlocked": "The transfer password must be 8–16 half-width letters or digits without spaces",
           "tooLong": "The transfer password is too long"
         },
         "alerts": {
           "notesTitle": "Learn more: how it works, what is stored, and the risk",
           "warning1": {
-            "title": "After the transfer, your phone is signed out",
-            "description": "You then restore the account to your phone with the new transfer code the Toolbox issues. You see the account first, and nothing runs until you confirm."
+            "title": "After the transfer, the original device is signed out",
+            "description": "Haruki Toolbox issues a new transfer code for signing in; you must confirm the account details first"
           },
           "flow": {
             "title": "Steps",
-            "step1": "First the account is only looked up (the code is not used); check the nickname and rank. Transfer codes are valid for 24 hours and work once.",
-            "step2": "Once the details look right, confirm with your Haruki Toolbox sign-in password (accounts that sign in with Google, Apple or a passkey use a vault PIN instead). Only then does the transfer run. Until then you can cancel and the code stays valid.",
-            "step3": "Right after the transfer a new transfer code is issued and shown on this page, and stored encrypted in the transfer-code vault below, where you can see it again for 24 hours.",
-            "step4": "Finally the game data is fetched and saved. Even if this step fails, the new code is kept."
+            "step1": "First the account is only looked up (the code is not used); check the nickname and rank. Transfer codes are valid for 24 hours and work once",
+            "step2": "Once the details look right, confirm with your Haruki Toolbox sign-in password (accounts that sign in with Google, Apple or a passkey use a vault PIN instead). Only then does the transfer run. Until then you can cancel and the code stays valid",
+            "step3": "Right after the transfer a new transfer code is issued and shown on this page, and stored encrypted in the transfer-code vault below, where you can see it again for 24 hours",
+            "step4": "Finally the game data is fetched and saved. Even if this step fails, the new code is kept"
           },
           "storage": {
             "title": "What we store",
-            "text": "The code you enter is only used for this transfer and is not stored. After the transfer, the game account's sign-in info (at most 7 days, used to re-issue codes) and the new code (24 hours) are stored encrypted; only your Haruki Toolbox sign-in password or vault PIN opens them, and staff cannot read them. You can delete them at any time in the vault below."
+            "text": "The code you enter is only used for this transfer and is not stored. After the transfer, the game account's sign-in info (at most 7 days, used to re-issue codes) and the new code (24 hours) are stored encrypted; only your Haruki Toolbox sign-in password or vault PIN opens them, and staff cannot read them. You can delete them at any time in the vault below"
           },
           "risk": {
             "title": "Risk",
-            "text": "This feature signs in by imitating the game client with your transfer code. The publisher could in theory treat that as an unusual login; judge the risk yourself, and prefer HarukiProxy or the iOS module if unsure."
+            "text": "This feature signs in by imitating the game client with your transfer code. The publisher could in theory treat that as an unusual login; judge the risk yourself, and prefer HarukiProxy or the iOS module if unsure"
           }
         },
         "submit": "Look up account",
@@ -635,53 +635,53 @@ export default {
           "hide": "Hide the {count} step that did not run | Hide the {count} steps that did not run"
         },
         "announce": {
-          "created": "Reading the account; progress is shown below.",
-          "awaiting_confirm": "Account details loaded; check them and confirm.",
-          "new_code": "Your new transfer code is ready; write it down."
+          "created": "Reading the account; progress is shown below",
+          "awaiting_confirm": "Account details loaded; check them and confirm",
+          "new_code": "Your new transfer code is ready; write it down"
         },
         "resumeFailed": {
           "title": "A transfer may be in progress, but it cannot be reached right now",
-          "description": "{reason} Its progress shows again once the connection is back; you can also submit again and the Toolbox reattaches to the running transfer.",
+          "description": "{reason} Its progress shows again once the connection is back; you can also submit again and the Toolbox reattaches to the running transfer",
           "retry": "Retry"
         },
         "codeValidity": {
-          "valid": "The code you entered was not used and is still valid.",
-          "used": "The code you entered has been used and cannot be used again.",
-          "unknown": "It is unclear whether the code you entered was used. Do not use it on another device for now, and check the vault below."
+          "valid": "The code you entered was not used and is still valid",
+          "used": "The code you entered has been used and cannot be used again",
+          "unknown": "It is unclear whether the code you entered was used. Do not use it on another device for now, and check the vault below"
         },
         "errorTitle": "Transfer not completed",
         "issueFailedTitle": "No new transfer code was issued",
         "cancelledTitle": "Cancelled",
         "succeededTitle": "Upload complete",
-        "succeededDescription": "The account data has been saved.",
-        "expired": "The progress record of this transfer has expired (it is kept for 1 hour). The new code can still be viewed in the vault below.",
+        "succeededDescription": "The account data has been saved",
+        "expired": "The progress record of this transfer has expired (it is kept for 1 hour). The new code can still be viewed in the vault below",
         "errors": {
-          "inherit_invalid": "The transfer code is invalid, already used or expired. Generate a new code in the game and try again.",
-          "inherit_restricted": "The game does not allow transfers for this account right now. Nothing was transferred and your code is still valid.",
-          "transfer_restricted": "This account has no transfers left during the current event. Nothing was transferred and your code is still valid.",
-          "confirm_timeout": "Not confirmed within 5 minutes, so it was cancelled. Nothing was transferred; your code is still valid and you can submit it again.",
-          "cancelled": "Cancelled; nothing was transferred.",
-          "game_degraded": "The game server is unstable at the moment; nothing was transferred. Please try again later.",
-          "server_busy": "Too many people are using this right now; nothing was transferred. Please try again later.",
-          "game_maintenance": "The game server is under maintenance. Please try again after it ends.",
-          "game_unavailable": "The game server cannot be reached right now. Please try again later.",
-          "game_error": "The game server returned an error. Please try again later.",
-          "game_version_outdated": "The game just updated its data version and Toolbox has not caught up yet. Please try again later.",
-          "game_version_outdated_after_transfer": "The game just updated its data version and Toolbox has not caught up yet, so the game data could not be fetched. The new code (if one was issued) is shown on this page; you can upload again later with it.",
-          "execute_uncertain": "The connection dropped during the transfer, so it is unclear whether your code was used. Do not use this code on another device for now, and check the vault below: if this account shows up there, the transfer went through and you can view or re-issue the code there.",
-          "login_failed": "The transfer went through and the sign-in info is in the vault, but signing in to the game failed. Later, press “Re-issue” in the vault below to get a new transfer code.",
-          "fetch_failed": "Fetching the game data failed. The new code (if one was issued) is shown on this page and kept in the vault.",
-          "mysekai_unavailable": "Fetching MySekai data failed; the MySekai tutorial may not be finished. The new code (if one was issued) is shown on this page and kept in the vault.",
-          "upload_failed": "Saving the data failed. The new code (if one was issued) is shown on this page and kept in the vault.",
-          "upload_forbidden": "This game account is bound to another Haruki Toolbox user, so it cannot be uploaded. The new code (if one was issued) is shown on this page and kept in the vault.",
-          "job_interrupted": "The server restarted and this transfer was interrupted.",
-          "internal_error": "Something went wrong on the server and this transfer did not finish."
+          "inherit_invalid": "The transfer code is invalid, already used or expired. Generate a new code in the game and try again",
+          "inherit_restricted": "The game does not allow transfers for this account right now. Nothing was transferred and your code is still valid",
+          "transfer_restricted": "This account has no transfers left during the current event. Nothing was transferred and your code is still valid",
+          "confirm_timeout": "Not confirmed within 5 minutes, so it was cancelled. Nothing was transferred; your code is still valid and you can submit it again",
+          "cancelled": "Cancelled; nothing was transferred",
+          "game_degraded": "The game server is unstable at the moment; nothing was transferred. Please try again later",
+          "server_busy": "Too many people are using this right now; nothing was transferred. Please try again later",
+          "game_maintenance": "The game server is under maintenance. Please try again after it ends",
+          "game_unavailable": "The game server cannot be reached right now. Please try again later",
+          "game_error": "The game server returned an error. Please try again later",
+          "game_version_outdated": "The game just updated its data version and Toolbox has not caught up yet. Please try again later",
+          "game_version_outdated_after_transfer": "The game just updated its data version and Toolbox has not caught up yet, so the game data could not be fetched. The new code (if one was issued) is shown on this page; you can upload again later with it",
+          "execute_uncertain": "The connection dropped during the transfer, so it is unclear whether your code was used. Do not use this code on another device for now, and check the vault below: if this account shows up there, the transfer went through and you can view or re-issue the code there",
+          "login_failed": "The transfer went through and the sign-in info is in the vault, but signing in to the game failed. Later, press “Re-issue” in the vault below to get a new transfer code",
+          "fetch_failed": "Fetching the game data failed. The new code (if one was issued) is shown on this page and kept in the vault",
+          "mysekai_unavailable": "Fetching MySekai data failed; the MySekai tutorial may not be finished. The new code (if one was issued) is shown on this page and kept in the vault",
+          "upload_failed": "Saving the data failed. The new code (if one was issued) is shown on this page and kept in the vault",
+          "upload_forbidden": "This game account is bound to another Haruki Toolbox user, so it cannot be uploaded. The new code (if one was issued) is shown on this page and kept in the vault",
+          "job_interrupted": "The server restarted and this transfer was interrupted",
+          "internal_error": "Something went wrong on the server and this transfer did not finish"
         },
         "warnings": {
-          "issue_code_failed": "No new transfer code was issued. The sign-in info is in the vault: press “Re-issue” in the vault below now: it is your only way back into the account.",
-          "vault_db_unavailable": "The database was unavailable; the sign-in info is stored temporarily and will be moved over automatically. Nothing changes for you.",
-          "vault_store_failed": "The sign-in info or the new code could not be stored in the vault. Write down the new code shown on this page now.",
-          "game_version_outdated": "The game just updated its data version and Toolbox has not caught up yet, so this step did not succeed."
+          "issue_code_failed": "No new transfer code was issued. The sign-in info is in the vault: press “Re-issue” in the vault below now: it is your only way back into the account",
+          "vault_db_unavailable": "The database was unavailable; the sign-in info is stored temporarily and will be moved over automatically. Nothing changes for you",
+          "vault_store_failed": "The sign-in info or the new code could not be stored in the vault. Write down the new code shown on this page now",
+          "game_version_outdated": "The game just updated its data version and Toolbox has not caught up yet, so this step did not succeed"
         },
         "actions": {
           "startNew": "Start a new upload",
@@ -696,7 +696,7 @@ export default {
         },
         "confirm": {
           "title": "Confirm the account to transfer",
-          "description": "Check the account details. Your transfer code has not been used yet, so cancelling changes nothing.",
+          "description": "Check the account details. Your transfer code has not been used yet, so cancelling changes nothing",
           "nickname": "Nickname",
           "rank": "Rank",
           "userId": "Game ID",
@@ -704,41 +704,41 @@ export default {
             "title": "Event transfer restriction",
             "active": "This account is under the event transfer restriction",
             "remaining": "Transfers left: {count}",
-            "consumes": "Transferring here uses 1 of them; at 0 the game refuses to transfer.",
+            "consumes": "Transferring here uses 1 of them; at 0 the game refuses to transfer",
             "endsAt": "Restriction ends: {time}",
             "worldBloom": "A World Link chapter is running",
-            "none": "No transfer restriction right now."
+            "none": "No transfer restriction right now"
           },
-          "warningTitle": "Once you confirm, your phone can no longer sign in to this account",
-          "warningBody": "The account moves to the Toolbox. This page then shows a new transfer code; use it to transfer the account back to your phone.",
-          "deadline": "Confirm within {time}; after that it is cancelled (your code stays valid).",
+          "warningTitle": "After confirming, this transfer code can no longer be used",
+          "warningBody": "The Toolbox then issues a new transfer code; use it to sign in to the account again",
+          "deadline": "Confirm within {time}; otherwise the job is cancelled and the transfer code stays valid",
           "password": "Haruki Toolbox sign-in password",
-          "passwordHelp": "The password you sign in to this website with. Not the game's transfer password, and not your QQ or Google password.",
-          "passwordWhy": "It locks the saved sign-in info so that only you can open it.",
-          "passwordFirstUse": "It locks the saved sign-in info so that only you can open it. Your transfer-code vault is created when you first confirm.",
+          "passwordHelp": "The password you sign in to this website with. Not the game's transfer password, and not your QQ or Google password",
+          "passwordWhy": "",
+          "passwordFirstUse": "",
           "forgotPassword": "Forgot your password?",
-          "forgotPasswordNote": "If you forget your password and set a new one, what is saved in the vault can no longer be opened; the only way forward is resetting the vault, which deletes it.",
+          "forgotPasswordNote": "If you forget your password and set a new one, what is saved in the vault can no longer be opened; the only way forward is resetting the vault, which deletes it",
           "pin": "Vault PIN",
-          "pinHint": "You sign in to this website with Google, Apple or a passkey and have no password, so you use the vault PIN you set earlier instead.",
+          "pinHint": "Users who sign in with Google, Apple or a passkey need to verify their vault PIN",
           "pinCreate": "Set a vault PIN",
-          "pinCreateHint": "You sign in to this website with Google, Apple or a passkey and have no password, so set a separate PIN.",
-          "pinCreateWhy": "The PIN locks the saved sign-in info; you enter it whenever you view or re-issue a code. At least 8 characters.",
-          "pinCreateWarning": "The PIN cannot be recovered. If you forget it, the only way forward is resetting the vault, which deletes what is saved.",
+          "pinCreateHint": "Users who sign in with Google, Apple or a passkey need to set a separate PIN",
+          "pinCreateWhy": "The PIN locks the saved sign-in info; you enter it whenever you view or re-issue a code. At least 8 characters",
+          "pinCreateWarning": "The PIN cannot be recovered. If you forget it, the only way forward is resetting the vault, which deletes what is saved",
           "pinRepeat": "Enter the PIN again",
           "pinMismatch": "The PINs do not match; enter them again",
           "pinFormat": "The PIN must be 8 to 128 characters",
-          "forgotPin": "Forgot your PIN? It cannot be recovered; the only way forward is resetting the vault (what is saved is deleted).",
+          "forgotPin": "Forgot your PIN? It cannot be recovered; the only way forward is resetting the vault (what is saved is deleted)",
           "passwordRequired": "Enter your Haruki Toolbox sign-in password",
           "previousPassword": "Previous sign-in password",
           "previousPasswordRequired": "Enter the sign-in password you had before the change",
           "submit": "Confirm and transfer",
           "submitting": "Verifying…",
-          "cancel": "Cancel, do not transfer",
+          "cancel": "Cancel transfer",
           "cancelling": "Cancelling…"
         },
         "newCode": {
           "title": "Your new transfer code",
-          "description": "Use it on your phone now to transfer the account back, or write it down somewhere safe.",
+          "description": "Use this code on your device now to restore the account, or write it down somewhere safe",
           "inheritId": "Transfer ID",
           "password": "Transfer password",
           "copy": "Copy {label}",
@@ -746,26 +746,26 @@ export default {
           "copyFailed": "Copy failed; please write it down by hand",
           "expiresIn": "Valid for {time}",
           "expiresAt": "Valid until {time}",
-          "expired": "This code has expired; re-issue one from the vault.",
-          "singleUse": "Valid for 24 hours and works once.",
-          "savedToVault": "Stored encrypted in the vault below; you can view it again for 24 hours.",
+          "expired": "This code has expired; re-issue one from the vault",
+          "singleUse": "Valid for 24 hours and works once",
+          "savedToVault": "Stored encrypted in the vault below; you can view it again for 24 hours",
           "nextSteps": {
             "title": "Next",
-            "restore": "Transfer the account back to your phone with this code.",
-            "platformLink": "Once it is back, we recommend linking it to Game Center (iOS) or Google Play Games (Android) in the game's transfer menu (JP can also link an Apple or Google account), so you no longer depend on transfer codes.",
-            "cleanup": "After that, press “I recovered it on my phone” in the vault below to delete the saved record."
+            "restore": "Restore the account on your device with this transfer code",
+            "platformLink": "Once it is back, we recommend linking it to Game Center (iOS) or Google Play Games (Android) in the game's transfer menu (JP can also link an Apple or Google account), so you no longer depend on transfer codes",
+            "cleanup": "After restoring the account, select “I recovered it on my device” in the vault below to delete the saved record"
           },
           "unsavedTitle": "Write this code down now",
-          "unsavedBody": "This code could not be stored in the vault and cannot be shown again once you leave this page. Copy it or take a screenshot now.",
+          "unsavedBody": "This code could not be stored in the vault and cannot be shown again once you leave this page. Copy it or take a screenshot now",
           "ack": "I have written it down",
           "acked": "Written down"
         }
       },
       "inheritVault": {
         "title": "Transfer code vault",
-        "description": "The new code (kept 24 hours) and the game sign-in info used to re-issue codes (kept 7 days) are stored here, encrypted. Viewing them asks you to verify ({secret}).",
-        "empty": "Nothing is saved in the vault yet.",
-        "notInitialized": "You have not used the vault yet; it is created when you first confirm a transfer.",
+        "description": "The new code (kept 24 hours) and the game sign-in info used to re-issue codes (kept 7 days) are stored here, encrypted. Viewing them asks you to verify ({secret})",
+        "empty": "Nothing is saved in the vault yet",
+        "notInitialized": "You have not used the vault yet; it is created when you first confirm a transfer",
         "loadFailed": "Could not load the vault",
         "refresh": "Refresh",
         "entry": {
@@ -777,7 +777,7 @@ export default {
           "expired": "Expired",
           "noCode": "No code to show",
           "currentCode": "Current transfer code",
-          "unreadable": "This record was saved before the vault was reset and can no longer be opened.",
+          "unreadable": "This record was saved before the vault was reset and can no longer be opened",
           "pending": "Stored temporarily, moved over soon; works normally"
         },
         "actions": {
@@ -789,23 +789,23 @@ export default {
         },
         "reveal": {
           "title": "Show transfer code",
-          "description": "Verify it is you to show this record's transfer code. Every view is emailed to your verified address."
+          "description": "Verify it is you to show this record's transfer code. Every view is emailed to your verified address"
         },
         "reissue": {
           "title": "Re-issue transfer code",
-          "description": "The Toolbox signs in to the game with the saved sign-in info and issues a new transfer code; the previous code stops working at once. This takes a few seconds.",
+          "description": "The Toolbox signs in to the game with the saved sign-in info and issues a new transfer code; the previous code stops working at once. This takes a few seconds",
           "modeLabel": "Password of the new code",
           "reuse": "Keep the previous code's password",
           "random": "Generate a random one"
         },
         "destroy": {
           "title": "Delete this record?",
-          "description": "Make sure you have transferred the account back to your phone. After deleting, this account's code can no longer be shown or re-issued.",
+          "description": "Make sure you have transferred the account back to your phone. After deleting, this account's code can no longer be shown or re-issued",
           "confirm": "Delete"
         },
         "reset": {
           "title": "Reset the vault?",
-          "description": "This deletes every record in the vault ({records}) and cannot be undone. Use it only if you cannot remember your previous sign-in password (for example after setting a new one because you forgot it) or forgot your vault PIN.",
+          "description": "This deletes every record in the vault ({records}) and cannot be undone. Use it only if you cannot remember your previous sign-in password (for example after setting a new one because you forgot it) or forgot your vault PIN",
           "records": "no records | 1 record | {count} records",
           "password": "Current Haruki Toolbox sign-in password",
           "ack": "I understand that every record will be deleted",
@@ -814,8 +814,8 @@ export default {
         },
         "passwordChanged": {
           "title": "Enter your previous sign-in password",
-          "description": "You changed your Haruki Toolbox sign-in password, but the vault is still locked with the old one. Enter the old password once and the vault switches to your current password.",
-          "forgot": "Cannot remember the old password? The only way forward is resetting the vault, which deletes what is saved in it.",
+          "description": "You changed your Haruki Toolbox sign-in password, but the vault is still locked with the old one. Enter the old password once and the vault switches to your current password",
+          "forgot": "Cannot remember the old password? The only way forward is resetting the vault, which deletes what is saved in it",
           "resetAction": "Reset vault"
         },
         "unlock": {
@@ -827,80 +827,80 @@ export default {
         }
       },
       "inheritErrors": {
-        "invalid_request": "The request was malformed; reload the page and try again.",
-        "invalid_server": "Only JP and Global are supported.",
-        "invalid_upload_type": "Unsupported data type.",
-        "inherit_id_invalid": "The transfer ID must be 16 letters or digits.",
-        "inherit_password_invalid": "Enter the transfer password (at most 64 characters).",
-        "new_password_mode_invalid": "Choose how to set the new code's password.",
-        "reuse_password_invalid": "This password cannot be kept (8–16 half-width characters, no spaces); choose “Generate a random one”.",
-        "mysekai_requires_qq": "Uploading MySekai data requires binding and verifying a QQ account under HarukiBot data authorization.",
-        "job_already_running": "You already have a transfer in progress; finish or cancel it first.",
-        "rate_limited": "Too many submissions (at most 10 per hour); please try again later.",
-        "server_busy": "Too many people are using this right now; please try again later.",
-        "game_degraded": "The game server is unstable at the moment; please try again later.",
-        "vault_unavailable": "Transfer-code uploads are unavailable right now; please try again later.",
-        "identity_unavailable": "Your account details cannot be checked right now; please try again later.",
-        "store_unavailable": "The service is unavailable right now; please try again later.",
-        "job_not_found": "The record of this transfer does not exist or has expired.",
-        "job_not_awaiting_confirm": "This transfer is no longer waiting for confirmation (it may already be confirmed, cancelled or timed out); check the progress above.",
-        "cannot_cancel": "The transfer has already started and can no longer be cancelled.",
-        "unauthenticated": "Your session has ended; sign in to Haruki Toolbox again.",
+        "invalid_request": "The request was malformed; reload the page and try again",
+        "invalid_server": "Only JP and Global are supported",
+        "invalid_upload_type": "Unsupported data type",
+        "inherit_id_invalid": "The transfer ID must be 16 letters or digits",
+        "inherit_password_invalid": "Enter the transfer password (at most 64 characters)",
+        "new_password_mode_invalid": "Choose how to set the new code's password",
+        "reuse_password_invalid": "This password cannot be kept (8–16 half-width characters, no spaces); choose “Generate a random one”",
+        "mysekai_requires_qq": "Uploading MySekai data requires binding and verifying a QQ account under HarukiBot data authorization",
+        "job_already_running": "You already have a transfer in progress; finish or cancel it first",
+        "rate_limited": "Too many submissions (at most 10 per hour); please try again later",
+        "server_busy": "Too many people are using this right now; please try again later",
+        "game_degraded": "The game server is unstable at the moment; please try again later",
+        "vault_unavailable": "Transfer-code uploads are unavailable right now; please try again later",
+        "identity_unavailable": "Your account details cannot be checked right now; please try again later",
+        "store_unavailable": "The service is unavailable right now; please try again later",
+        "job_not_found": "The record of this transfer does not exist or has expired",
+        "job_not_awaiting_confirm": "This transfer is no longer waiting for confirmation (it may already be confirmed, cancelled or timed out); check the progress above",
+        "cannot_cancel": "The transfer has already started and can no longer be cancelled",
+        "unauthenticated": "Your session has ended; sign in to Haruki Toolbox again",
         "ws_ticket_invalid": "The connection dropped; reconnecting…",
-        "internal_error": "Something went wrong on the server; please try again later.",
-        "password_required": "Enter your Haruki Toolbox sign-in password.",
-        "vault_pin_required": "Enter your vault PIN.",
-        "vault_pin_invalid_format": "The vault PIN must be 8 to 128 characters.",
-        "password_invalid": "Wrong sign-in password. Enter the password you sign in to this website with, not the game's transfer password.",
-        "vault_pin_invalid": "Wrong vault PIN; please try again.",
-        "previous_password_invalid": "That is not the previous sign-in password; please try again. If you cannot remember it, the only way forward is resetting the vault.",
-        "vault_password_changed": "You changed your sign-in password; enter the password you had before the change once.",
-        "vault_not_initialized": "You have not used the vault yet; it is created when you first confirm a transfer.",
-        "unlock_rate_limited": "Too many wrong attempts; to protect your account, please try again in 15 minutes.",
-        "entry_not_found": "This record does not exist or has expired.",
-        "entry_stale": "This record was saved before the vault was reset and can no longer be opened.",
-        "code_not_available": "This record has no code to show right now (older than 24 hours or never issued); press “Re-issue”.",
-        "no_previous_password": "There is no previous transfer password to keep; choose “Generate a random one”.",
-        "reset_confirmation_required": "Tick the confirmation first.",
-        "reissue_failed": "Re-issuing the transfer code failed; please try again later.",
-        "reissue_login_failed": "The saved sign-in info no longer signs in to the game; it may have expired.",
-        "reissue_rejected": "The game server refused the request; please try again later.",
-        "client_update_required": "This page is out of date; please reload it.",
-        "retryAfter": "Try again in {seconds} seconds.",
-        "network": "Cannot reach the server; check your connection and try again.",
-        "unknown": "The request failed (HTTP {status}); please try again later."
+        "internal_error": "Something went wrong on the server; please try again later",
+        "password_required": "Enter your Haruki Toolbox sign-in password",
+        "vault_pin_required": "Enter your vault PIN",
+        "vault_pin_invalid_format": "The vault PIN must be 8 to 128 characters",
+        "password_invalid": "Wrong sign-in password. Enter the password you sign in to this website with, not the game's transfer password",
+        "vault_pin_invalid": "Wrong vault PIN; please try again",
+        "previous_password_invalid": "That is not the previous sign-in password; please try again. If you cannot remember it, the only way forward is resetting the vault",
+        "vault_password_changed": "You changed your sign-in password; enter the password you had before the change once",
+        "vault_not_initialized": "You have not used the vault yet; it is created when you first confirm a transfer",
+        "unlock_rate_limited": "Too many wrong attempts; to protect your account, please try again in 15 minutes",
+        "entry_not_found": "This record does not exist or has expired",
+        "entry_stale": "This record was saved before the vault was reset and can no longer be opened",
+        "code_not_available": "This record has no code to show right now (older than 24 hours or never issued); press “Re-issue”",
+        "no_previous_password": "There is no previous transfer password to keep; choose “Generate a random one”",
+        "reset_confirmation_required": "Tick the confirmation first",
+        "reissue_failed": "Re-issuing the transfer code failed; please try again later",
+        "reissue_login_failed": "The saved sign-in info no longer signs in to the game; it may have expired",
+        "reissue_rejected": "The game server refused the request; please try again later",
+        "client_update_required": "This page is out of date; please reload it",
+        "retryAfter": "Try again in {seconds} seconds",
+        "network": "Cannot reach the server; check your connection and try again",
+        "unknown": "The request failed (HTTP {status}); please try again later"
       }
     },
     "pointCalculator": {
       "title": "Event Pt Score Control Calculator",
-      "description": "Calculate the event bonus and score ranges needed for a target event Pt value.",
+      "description": "Calculate the event bonus and score ranges needed for a target event Pt value",
       "tips": {
         "title": "Tip",
         "beta": "Beta",
-        "boostConfig": "Before score control, make sure your Live Boost setting is correct to avoid missing the target.",
-        "testingPrefix": "This feature is still being tested.",
-        "testingSuffix": " If you run into any issue, please contact Haruki Dev Team.",
-        "deckRecommend": "Score-control results include a Bonus deck button for quick deck recommendation."
+        "boostConfig": "Before score control, make sure your Live Boost setting is correct to avoid missing the target",
+        "testingPrefix": "This feature is still being tested",
+        "testingSuffix": " If you run into any issue, please contact Haruki Dev Team",
+        "deckRecommend": "Score-control results include a Bonus deck button for quick deck recommendation"
       },
       "fields": {
         "region": "Data server",
         "music": "Music",
-        "loadingMusic": "Preparing music...",
+        "loadingMusic": "Preparing music..",
         "musicPlaceholder": "Select a music",
-        "musicSearchPlaceholder": "Search music name, #ID, kana, pinyin, or romaji...",
-        "musicEmpty": "No music found.",
+        "musicSearchPlaceholder": "Search music name, #ID, kana, pinyin, or romaji..",
+        "musicEmpty": "No music found",
         "targetPt": "Target event Pt",
         "targetPtPlaceholder": "Enter target event Pt",
-        "targetPtInvalid": "Target event Pt must be a whole number greater than 0.",
+        "targetPtInvalid": "Target event Pt must be a whole number greater than 0",
         "maxResults": "Max results",
         "maxResultsPlaceholder": "Default 10",
         "bonusRange": "Custom bonus range",
-        "bonusRangeHelp": "Only searches event bonuses within this range. Defaults to 100%-435%, accepts 0%-1000%.",
+        "bonusRangeHelp": "Only searches event bonuses within this range. Defaults to 100%-435%, accepts 0%-1000%",
         "customBonusFloor": "Custom bonus floor",
         "customBonusFloorPlaceholder": "Default 100",
         "customBonusCap": "Custom bonus cap",
         "customBonusCapPlaceholder": "Default 435",
-        "bonusRangeInvalid": "Bonus range must use integers from 0 to 1000, and the floor cannot be greater than the cap.",
+        "bonusRangeInvalid": "Bonus range must use integers from 0 to 1000, and the floor cannot be greater than the cap",
         "boostIndex": "Live Boost",
         "boostIndexAll": "All Live Boost levels",
         "boostIndexOption": "{index} Live Boost ({rate}x)",
@@ -915,18 +915,18 @@ export default {
         "music": "Music: {value}",
         "basicPoint": "Basic Pt: {value}",
         "bonusRange": "Bonus range: {min}%-{max}%",
-        "missingBasicPoint": "This song has no base Pt data yet. Pick another song or difficulty."
+        "missingBasicPoint": "This song has no base Pt data yet. Pick another song or difficulty"
       },
       "result": {
         "title": "Calculation result",
-        "placeholder": "Results will appear here after entering a target event Pt.",
-        "summary": "{count} plan(s) found.",
-        "empty": "No calculation result yet.",
+        "placeholder": "Results will appear here after entering a target event Pt",
+        "summary": "{count} plan(s) found",
+        "empty": "No calculation result yet",
         "deckBonus": "Required bonus {value}%",
         "boost": "{index} Live Boost / {rate}x",
         "scoreRangeLabel": "Playable score range",
         "noMatchTitle": "No matching plan found",
-        "noMatchDescription": "Try adjusting target Pt, Live Boost, or the custom bonus cap."
+        "noMatchDescription": "Try adjusting target Pt, Live Boost, or the custom bonus cap"
       }
     }
   },
@@ -935,22 +935,22 @@ export default {
     "description": "Register a HarukiBot NEO instance and obtain your Bot credential",
     "disabled": {
       "title": "Registration unavailable",
-      "description": "HarukiBot NEO registration is currently closed. Please try again later.",
+      "description": "HarukiBot NEO registration is currently closed. Please try again later",
       "retryButton": "Retry"
     },
     "input": {
       "warningTitle": "Warning",
-      "warningDescription": "Please register with your personal QQ main account (not the QQ account used to connect HarukiBot NEO as a Bot), otherwise you will be denied access to the QQ group.",
+      "warningDescription": "Please register with your personal QQ main account (not the QQ account used to connect HarukiBot NEO as a Bot), otherwise you will be denied access to the QQ group",
       "warningGroup": "NEO Distributed QQ Group: 111612548",
       "qqLabel": "QQ number",
       "qqPlaceholder": "Enter your QQ number",
-      "hint": "A 6-digit verification code will be sent to your QQ mailbox ({qq}{'@'}qq.com). The code is valid for 10 minutes.",
+      "hint": "A 6-digit verification code will be sent to your QQ mailbox ({qq}{'@'}qq.com). The code is valid for 10 minutes",
       "hintQqPlaceholder": "your QQ number",
       "sendButton": "Send verification code",
       "cooldownButton": "Retry in {seconds}s"
     },
     "verify": {
-      "codeSentHint": "A verification code has been sent to {qq}{'@'}qq.com. Please check your mailbox.",
+      "codeSentHint": "A verification code has been sent to {qq}{'@'}qq.com. Please check your mailbox",
       "codeLabel": "Verification code",
       "codePlaceholder": "Enter 6-digit code",
       "backButton": "Back",
@@ -960,33 +960,33 @@ export default {
     },
     "result": {
       "successTitle": "Registration successful",
-      "successDescription": "Your HarukiBot NEO instance has been created. Please save the credentials below.",
+      "successDescription": "Your HarukiBot NEO instance has been created. Please save the credentials below",
       "botIdLabel": "Bot ID",
       "credentialLabel": "Credential",
       "copyAction": "Copy {label}",
-      "saveWarning": "The credential is shown only once. Please copy and save it securely — it cannot be retrieved again.",
+      "saveWarning": "The credential is shown only once. Please copy and save it securely — it cannot be retrieved again",
       "configGeneratorTitle": "Continue to Client config",
-      "configGeneratorDescription": "Open the config generator with the Bot ID and credential filled in. Then complete ports, modules, and access lists.",
+      "configGeneratorDescription": "Open the config generator with the Bot ID and credential filled in. Then complete ports, modules, and access lists",
       "configGeneratorButton": "Open config generator",
       "registerAnotherButton": "Register another"
     },
     "toast": {
       "statusCheckFailed": "Failed to check registration status",
-      "statusCheckFailedFallback": "Check your connection and click Retry; if it keeps failing the service may be temporarily unavailable.",
+      "statusCheckFailedFallback": "Check your connection and click Retry; if it keeps failing the service may be temporarily unavailable",
       "sendFailedTitle": "Send failed",
-      "sendFailedFallback": "The code was not sent. Check the QQ number and retry; if it keeps failing, try again later.",
+      "sendFailedFallback": "The code was not sent. Check the QQ number and retry; if it keeps failing, try again later",
       "missingQQNumber": "Enter your QQ number",
       "invalidQQNumber": "Please enter a valid QQ number (5–12 digits)",
       "rateLimitedTitle": "Rate limited",
-      "rateLimitedDescription": "Too many requests. Please retry after {seconds} seconds.",
+      "rateLimitedDescription": "Too many requests. Please retry after {seconds} seconds",
       "alreadyRegisteredTitle": "Already registered",
-      "alreadyRegisteredDescription": "This QQ number already has a registered Bot.",
+      "alreadyRegisteredDescription": "This QQ number already has a registered Bot",
       "registrationDisabledTitle": "Registration disabled",
-      "registrationDisabledDescription": "Registration is currently closed.",
+      "registrationDisabledDescription": "Registration is currently closed",
       "codeSentTitle": "Verification code sent",
-      "codeSentDescription": "Please check the mailbox of QQ {qq}.",
+      "codeSentDescription": "Please check the mailbox of QQ {qq}",
       "registerFailedTitle": "Registration failed",
-      "registerFailedFallback": "Registration did not complete. Check the code and retry; if it expired, send a new one.",
+      "registerFailedFallback": "Registration did not complete. Check the code and retry; if it expired, send a new one",
       "missingVerificationCode": "Please enter the verification code",
       "invalidVerificationCode": "The code is 6 digits; check it and enter it again",
       "incompleteResponse": "Incomplete response data",
@@ -998,7 +998,7 @@ export default {
   },
   "sekaiStation": {
     "title": "Sekai Station",
-    "description": "Real-time CN-server Multi Live room numbers collected from social media.",
+    "description": "Real-time CN-server Multi Live room numbers collected from social media",
     "viewOnSekaiStation": "View on Sekai Station",
     "notConfigured": "Sekai Station is temporarily unavailable",
     "connection": {
